@@ -341,6 +341,7 @@
   .section-head__pip--india { background: var(--india); }
   .section-head__pip--global { background: var(--global); }
   .section-head__pip--research { background: var(--research); }
+  .section-head__pip--policy { background: var(--policy); }
   .section-head__label {
     font-family: var(--font-sans);
     font-size: 0.82rem;
@@ -694,13 +695,13 @@
 
 <header class="hero">
   <div class="hero__label">The Daily Brief</div>
-  <h1 class="hero__title">Banks, Biology and Open Weights: AI Reaches Deeper Into the Fabric of Daily Life</h1>
-  <p class="hero__subtitle">From the RBI's call for banks to shape AI, to a virus designed from scratch, to Meta's on-device open models — August 12 sees AI move out of labs and into institutions, ecosystems and everyday devices.</p>
+  <h1 class="hero__title">AI Reshapes Banking, Models Go Local, and the Law Catches Up</h1>
+  <p class="hero__subtitle">RBI's governor tells banks to shape their own AI future, Meta open-sources a model that runs on your laptop, and India's regulators race to govern AI training, content removal, and copyright — all in a single day.</p>
   <div class="stats">
     <div class="stat"><div class="stat__value">10</div><div class="stat__label">Stories</div></div>
     <div class="stat"><div class="stat__value">10</div><div class="stat__label">Sources</div></div>
-    <div class="stat"><div class="stat__value">3</div><div class="stat__label">Sections</div></div>
-    <div class="stat"><div class="stat__value">7 min</div><div class="stat__label">Read time</div></div>
+    <div class="stat"><div class="stat__value">4</div><div class="stat__label">Sections</div></div>
+    <div class="stat"><div class="stat__value">8 min</div><div class="stat__label">Read time</div></div>
   </div>
 </header>
 
@@ -721,7 +722,7 @@
 <div class="editors-note">
   <div class="editors-note__box">
     <div class="editors-note__label">Editor's Note</div>
-    <p class="editors-note__text">Today's brief traces AI's quiet migration from capability demos into the institutions that shape daily life — banking, policing, payments and consumer devices in India, and open-weight models, cybersecurity research and generative biology globally. The recurring theme across the day's stories is clear: the technology is no longer merely arriving, it is being absorbed, and the decisive question has shifted from "what can it do?" to "who shapes how it is used?"</p>
+    <p class="editors-note__text">Today's brief captures a pivotal moment in AI's global trajectory. India's central bank is pushing financial institutions to proactively shape their AI journeys rather than be shaped by them, while the government simultaneously tightens rules on AI-generated content removal and proposes a landmark licensing framework for AI training data. On the global stage, Meta is betting big on open-weight, on-device models with Muse Glimmer, and OpenAI is grappling with its own model's emerging cybersecurity capabilities. The thread connecting these stories is clear: the AI conversation has moved firmly from "what can it do" to "who governs it, and how."</p>
   </div>
 </div>
 
@@ -732,31 +733,31 @@
   <span class="section-head__pip section-head__pip--india"></span>
   <span class="section-head__label">India</span>
   <span class="section-head__line"></span>
-  <span class="section-head__count">5 stories</span>
+  <span class="section-head__count">4 stories</span>
 </div>
 
-<!-- FEATURED STORY -->
-<article class="featured story-item" style="--i:0" data-tags="india policy">
+<!-- FEATURED TOP STORY -->
+<article class="featured story-item" style="--i:0" data-tags="india">
   <div class="featured__label">★ Top Story</div>
   <div class="story__top">
-    <span class="story__tag tag--policy">Policy</span>
+    <span class="story__tag tag--india">India</span>
     <button class="bookmark" onclick="toggleBookmark(this)" title="Save story">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/><path class="bm-fill" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" fill="currentColor"/></svg>
     </button>
   </div>
-  <h2 class="story__headline"><a href="https://www.moneycontrol.com/news/business/banks/ai-can-do-for-lending-what-upi-did-for-payments-rbi-governor-sanjay-malhotra-says-14001508.html" target="_blank" rel="noopener">RBI Governor asks banks to 'shape the AI journey' before it shapes them</a></h2>
-  <p class="story__summary">RBI Governor Sanjay Malhotra has urged banks to take a proactive approach to AI adoption, warning that the technology will reshape financial services regardless of whether institutions act. Speaking at FIBAC 2026, he argued AI could do for lending what UPI did for payments.</p>
-  <div class="story__expand">Malhotra said AI could widen the credit net by using alternative data — GST filings, cash flows and utility bills — to assess new-to-credit borrowers and underserved sections of society. He positioned India's digital public infrastructure, including Aadhaar, UPI, DigiLocker, the Account Aggregator framework and the Unified Lending Interface, as a foundation few other markets can match. The RBI is pursuing a principles-based, proportionate approach to AI regulation and expects banks to maintain inventories of AI models, establish board-approved governance policies, ensure explainability and retain meaningful human oversight. "Doing business, doing banking, and so on, requires a total change in mindset," he told the conference.</div>
+  <h2 class="story__headline"><a href="https://www.theregister.com/ai-and-ml/2026/08/12/indias-central-bank-wants-ai-to-approve-loans-that-humans-would-reject/5286572" target="_blank" rel="noopener">RBI Governor Tells Banks to Harness AI — Not Just Contain Its Risks</a></h2>
+  <p class="story__summary">Reserve Bank of India Governor Sanjay Malhotra has urged the country's banks to proactively shape their AI journeys rather than let the technology dictate direction, calling AI "the most powerful accelerator to financial inclusion." Speaking at the FIBAC 2026 conference in Mumbai, he said AI models trained on alternative data — cash flows, GST filings, utility payments — could extend credit to millions of underbanked Indians that manual underwriting cannot reach.</p>
+  <div class="story__expand">Malhotra laid out a detailed vision: AI-enhanced credit risk models that spot emerging stress earlier than lagging financial statements allow, liquidity forecasting, and relationship managers augmented by AI to serve more customers efficiently. But he was equally forceful about risks, warning that opaque models make it "exceedingly difficult for auditors, boards, and the Reserve Bank to be confident that a model is doing what it was designed to do." He set explicit expectations: banks must maintain a complete inventory of every AI system in use, establish board-approved AI governance policies, build the capacity to explain AI-driven decisions, red-team systems before deployment, and preserve meaningful human oversight at every material decision point. "The model decided can never be an acceptable answer to a customer, an auditor, or the Reserve Bank," he said. He also pointed to India's public digital infrastructure — Aadhaar, UPI, DigiLocker, ONDC — as the foundation on which private AI applications can be built, suggesting AI could do for financial decision-making what UPI did for digital transactions.</div>
   <div class="story__actions">
-    <a class="story__source-link" href="https://www.moneycontrol.com/news/business/banks/ai-can-do-for-lending-what-upi-did-for-payments-rbi-governor-sanjay-malhotra-says-14001508.html" target="_blank" rel="noopener">Read full story →</a>
+    <a class="story__source-link" href="https://www.theregister.com/ai-and-ml/2026/08/12/indias-central-bank-wants-ai-to-approve-loans-that-humans-would-reject/5286572" target="_blank" rel="noopener">Read full story →</a>
     <span class="story__sep">·</span>
-    <span>Moneycontrol</span>
+    <span>The Register</span>
     <span class="story__sep">·</span>
     <button class="expand-btn" onclick="toggleExpand(this)">More <span class="arrow">▼</span></button>
   </div>
 </article>
 
-<!-- STORY: Sarvam AI -->
+<!-- STORY 2 -->
 <article class="story story-item" style="--i:1" data-tags="india">
   <div class="story__top">
     <span class="story__tag tag--india">India</span>
@@ -764,19 +765,19 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/><path class="bm-fill" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" fill="currentColor"/></svg>
     </button>
   </div>
-  <h2 class="story__headline"><a href="https://www.newsbytesapp.com/news/science/sarvam-ai-ai4bharat-launch-indic-diarbench-covering-22-indian-languages/tldr" target="_blank" rel="noopener">Sarvam AI and AI4Bharat launch Indic DiarBench for 22 Indian languages</a></h2>
-  <p class="story__summary">Indian AI labs Sarvam AI and AI4Bharat have released Indic DiarBench, a dataset designed to make speech recognition smarter across 22 Indian languages by capturing real-world conversation — meetings, fast turn-taking and overlapping speech — rather than clean studio audio.</p>
-  <div class="story__expand">The dataset packs 108 hours of real conversations with 485 unique speakers drawn from both cities and villages, plus "in-the-wild" audio in the top 10 Indian languages covering around 750 speakers. It mixes in background noise and varied room settings, and is carefully labelled so researchers can test how well speech models identify who is speaking and what is being said — even when English is mixed in. The release targets a chronic weakness in Indian-language speech AI: most existing benchmarks evaluate clean, single-speaker audio, whereas real Indian speech is multilingual, noisy and multi-speaker.</div>
+  <h2 class="story__headline"><a href="https://www.fortuneindia.com/personal-finance/banking/indian-banks-race-to-scale-genai-as-adoption-jumps-to-86-bcg-ficci-iba/153443" target="_blank" rel="noopener">Indian Banks Race to Scale GenAI as Adoption Jumps to 86%</a></h2>
+  <p class="story__summary">A new BCG-FICCI-IBA report reveals that the share of Indian banks with GenAI use cases under implementation has surged from 44% in 2025 to 86% in 2026, up from just 10% in 2024. The report, "Winning in the AI Era: The New Playbook for Indian Banks," says scaling the technology will require changes in operating models, talent, and governance.</p>
+  <div class="story__expand">The report identifies credit affordability as a top priority, noting that operating and collection expenses account for 40–50% of the total cost to serve, making small-ticket retail credit economics particularly challenging. AI-enabled lending journeys could automate document processing, underwriting, and collections. Retail bureau coverage expanded from 45.5 crore borrowers in 2021 to 78.9 crore in 2026, while MSME bureau footprint nearly doubled. The report argues that previous decade's digitization hasn't translated into commensurate productivity gains — cost-to-income ratios remain elevated. Agentic AI could change that by handling complex, unstructured tasks and freeing employees for higher-value decisions. Key barriers remain: data and infrastructure readiness, talent shortages, regulatory concerns, and uncertainty over returns. Banking assets need to grow 3.5–4 percentage points faster than nominal GDP to support India's ambition of a $30 trillion economy by 2047.</div>
   <div class="story__actions">
-    <a class="story__source-link" href="https://www.newsbytesapp.com/news/science/sarvam-ai-ai4bharat-launch-indic-diarbench-covering-22-indian-languages/tldr" target="_blank" rel="noopener">Read more →</a>
+    <a class="story__source-link" href="https://www.fortuneindia.com/personal-finance/banking/indian-banks-race-to-scale-genai-as-adoption-jumps-to-86-bcg-ficci-iba/153443" target="_blank" rel="noopener">Read more →</a>
     <span class="story__sep">·</span>
-    <span>NewsBytes</span>
+    <span>Fortune India</span>
     <span class="story__sep">·</span>
     <button class="expand-btn" onclick="toggleExpand(this)">More <span class="arrow">▼</span></button>
   </div>
 </article>
 
-<!-- STORY: Paytm Claude -->
+<!-- STORY 3 -->
 <article class="story story-item" style="--i:2" data-tags="india">
   <div class="story__top">
     <span class="story__tag tag--india">India</span>
@@ -784,29 +785,9 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/><path class="bm-fill" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" fill="currentColor"/></svg>
     </button>
   </div>
-  <h2 class="story__headline"><a href="https://www.indiatoday.in/technology/news/story/paytm-starts-letting-users-manage-payments-with-claude-using-simple-ai-prompts-2967822-2026-08-10" target="_blank" rel="noopener">Paytm brings Claude into merchant payments via MCP connector</a></h2>
-  <p class="story__summary">Paytm Payment Gateway has integrated with Anthropic's Claude through the Model Context Protocol, letting authorised businesses manage payments using simple AI prompts. Merchants can now check transactions, refunds, settlements and reconciliation details without switching between dashboards.</p>
-  <div class="story__expand">The integration is less about making a payment with AI and more about changing how merchants interact with payment infrastructure. Using Anthropic's Model Context Protocol, the connector lets Claude call tools exposed by Paytm's services subject to authentication and configured permissions, so operations teams can query transaction histories, search payment links, track refunds and review settlement status conversationally. The backdrop is scale: NPCI data shows UPI processed 23.20 billion transactions worth ₹29.90 lakh crore in May 2026 alone, and Paytm's consumer UPI gross transaction value grew 45% year-on-year to ₹5.9 lakh crore in the June quarter. The move signals a broader shift toward natural-language interfaces for enterprise software in India.</div>
-  <div class="story__actions">
-    <a class="story__source-link" href="https://www.indiatoday.in/technology/news/story/paytm-starts-letting-users-manage-payments-with-claude-using-simple-ai-prompts-2967822-2026-08-10" target="_blank" rel="noopener">Read more →</a>
-    <span class="story__sep">·</span>
-    <span>India Today</span>
-    <span class="story__sep">·</span>
-    <button class="expand-btn" onclick="toggleExpand(this)">More <span class="arrow">▼</span></button>
-  </div>
-</article>
-
-<!-- STORY: Bengaluru Police -->
-<article class="story story-item" style="--i:3" data-tags="india">
-  <div class="story__top">
-    <span class="story__tag tag--india">India</span>
-    <button class="bookmark" onclick="toggleBookmark(this)" title="Save story">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/><path class="bm-fill" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" fill="currentColor"/></svg>
-    </button>
-  </div>
-  <h2 class="story__headline"><a href="https://www.moneycontrol.com/news/trends/how-a-manipuri-woman-s-midnight-call-inspired-a-first-of-its-kind-ai-system-for-bengaluru-police-14001736.html" target="_blank" rel="noopener">A midnight call in Manipuri sparked an AI translation system for Bengaluru Police</a></h2>
-  <p class="story__summary">A late-night distress call from a Manipuri-speaking woman exposed a language gap in Bengaluru's emergency response — and led startup Aeos to build an AI-powered real-time translation platform now deployed across the city's Namma 112 emergency service.</p>
-  <div class="story__expand">The system, formally called Multilingual Voice AI for Nationwide Key Interventions (VANKI), was rolled out by Bengaluru City Police earlier this year and allows callers to speak naturally in their preferred language while AI translates and relays the information to call handlers in real time. Developed jointly by Monday Ventures and Aeos, the platform currently supports more than 10 languages including Bengali, Gujarati, Odia, Manipuri, Kashmiri, Nepali and Assamese, along with international languages such as Spanish, French and Arabic. Police officials said the need was acute in Bengaluru, a city that draws students, professionals and workers from across India and the world, where language differences often slow emergency response.</div>
+  <h2 class="story__headline"><a href="https://www.moneycontrol.com/news/trends/how-a-manipuri-woman-s-midnight-call-inspired-a-first-of-its-kind-ai-system-for-bengaluru-police-14001736.html" target="_blank" rel="noopener">Bengaluru Police Deploy AI Translation System for Emergency Calls in 10+ Languages</a></h2>
+  <p class="story__summary">A late-night distress call from a Manipuri-speaking woman — who Bengaluru police couldn't understand — has led to the city rolling out VANKI, a first-of-its-kind AI-powered real-time translation system for emergency response. The system now handles calls in over 10 Indian and international languages, integrated into the city's Namma 112 emergency platform.</p>
+  <div class="story__expand">Built by Aeos and Monday Ventures, the Multilingual Voice AI for Nationwide Key Interventions (VANKI) lets callers speak naturally in their preferred language while AI translates and relays information to call handlers in real time. Supported languages include Bengali, Gujarati, Odia, Manipuri, Kashmiri, Nepali, Assamese, along with Spanish, French, and Arabic. The system eliminates the need for human translators and significantly reduces response delays. Bengaluru, which attracts people from across India and the world, had an increasingly evident language-gap problem in emergency situations where seconds matter. The AI layer ensures anyone can seek help regardless of whether they speak Kannada, Hindi, or any other language.</div>
   <div class="story__actions">
     <a class="story__source-link" href="https://www.moneycontrol.com/news/trends/how-a-manipuri-woman-s-midnight-call-inspired-a-first-of-its-kind-ai-system-for-bengaluru-police-14001736.html" target="_blank" rel="noopener">Read more →</a>
     <span class="story__sep">·</span>
@@ -816,21 +797,21 @@
   </div>
 </article>
 
-<!-- STORY: Samsung -->
-<article class="story story-item" style="--i:4" data-tags="india">
+<!-- STORY 4 -->
+<article class="story story-item" style="--i:3" data-tags="india policy">
   <div class="story__top">
     <span class="story__tag tag--india">India</span>
     <button class="bookmark" onclick="toggleBookmark(this)" title="Save story">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/><path class="bm-fill" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" fill="currentColor"/></svg>
     </button>
   </div>
-  <h2 class="story__headline"><a href="https://timesofindia.indiatimes.com/technology/tech-news/samsung-bets-on-india-to-drive-the-next-phase-of-galaxy-ai/articleshow/133102282.cms" target="_blank" rel="noopener">Samsung leans on India R&D to drive the next phase of Galaxy AI</a></h2>
-  <p class="story__summary">Samsung says India is playing a bigger role in shaping Galaxy AI, with engineers at its Noida and Bengaluru R&D centres developing features that are now part of the company's global AI strategy following the launch of the Galaxy Z Fold8 Ultra and Z Flip8.</p>
-  <div class="story__expand">JB Park, President and CEO of Samsung Southwest Asia, said the company's priority is not merely to expand its engineering workforce in India but to create original intellectual property from India, working with IITs and startups. One example is "Pay Now," a feature within the "Now Brief" experience that debuted on the latest foldables exclusively for Indian consumers and was built by India-based engineers. Samsung added that AI adoption in India already exceeds the global average, and that Tier 2 and Tier 3 markets now account for nearly two-thirds of its flagship smartphone sales — demand that is growing in double digits, faster than in metros.</div>
+  <h2 class="story__headline"><a href="https://www.newsbytesapp.com/news/science/india-cuts-flagged-ai-content-removal-from-36-to-3-hours/tldr" target="_blank" rel="noopener">India Cuts Flagged AI-Content Removal Window from 36 Hours to Just 3</a></h2>
+  <p class="story__summary">India has tightened rules for handling deepfakes and AI-generated content, slashing the removal window for flagged illegal posts from 36 hours to 3 hours. Platforms must also detect and label AI-made material, speed up complaint handling, and use technology tools to spot harmful synthetic content.</p>
+  <div class="story__expand">The new rules are focused on responsible AI use rather than outright bans, targeting specific harms: impersonation, non-consensual intimate imagery, child sexual abuse material, and deceptive representations of real people or events. Platforms are required to clearly label any permitted AI-made material so users know what's real and what's synthetic. The move comes as India also uses AI on the enforcement side — SEBI's Project SUDARSAN, launched last November, uses AI to scan social media posts, videos, and audio in regional languages for fake promises and dubious financial advice from "finfluencers," having already flagged over 20,000 suspicious pieces of content. 62% of Indian investors are reportedly influenced by finfluencers.</div>
   <div class="story__actions">
-    <a class="story__source-link" href="https://timesofindia.indiatimes.com/technology/tech-news/samsung-bets-on-india-to-drive-the-next-phase-of-galaxy-ai/articleshow/133102282.cms" target="_blank" rel="noopener">Read more →</a>
+    <a class="story__source-link" href="https://www.newsbytesapp.com/news/science/india-cuts-flagged-ai-content-removal-from-36-to-3-hours/tldr" target="_blank" rel="noopener">Read more →</a>
     <span class="story__sep">·</span>
-    <span>Times of India</span>
+    <span>NewsBytes</span>
     <span class="story__sep">·</span>
     <button class="expand-btn" onclick="toggleExpand(this)">More <span class="arrow">▼</span></button>
   </div>
@@ -838,29 +819,77 @@
 
 <!-- PULL QUOTE -->
 <div class="pullquote">
-  <p>"Rather than centralizing superintelligence, we should distribute it widely and give every person the ability to direct it."</p>
-  <cite>— Mark Zuckerberg, CEO of Meta, on open-sourcing Muse Spark 1.2 and unveiling Muse Glimmer</cite>
+  <p>"The only question now before us is whether you shape the AI journey or you let it shape you by default."</p>
+  <cite>— Sanjay Malhotra, Governor, Reserve Bank of India, at FIBAC 2026</cite>
 </div>
+
+<!-- SECTION: POLICY -->
+<div class="section-head" data-section="policy">
+  <span class="section-head__pip section-head__pip--policy"></span>
+  <span class="section-head__label">Policy & Regulation</span>
+  <span class="section-head__line"></span>
+  <span class="section-head__count">2 stories</span>
+</div>
+
+<!-- STORY 5 -->
+<article class="story story-item" style="--i:4" data-tags="policy">
+  <div class="story__top">
+    <span class="story__tag tag--policy">Policy</span>
+    <button class="bookmark" onclick="toggleBookmark(this)" title="Save story">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/><path class="bm-fill" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" fill="currentColor"/></svg>
+    </button>
+  </div>
+  <h2 class="story__headline"><a href="https://www.storyboard18.com/digital/ai-vs-publishers-india-seeks-licensing-solution-ws-l-107311.htm" target="_blank" rel="noopener">India Proposes "One Nation One License" for AI Training on Copyrighted Content</a></h2>
+  <p class="story__summary">India's DPIIT has published a working paper proposing a hybrid licensing model for AI training data, offering a mandatory blanket licence for AI developers to train on copyrighted material in exchange for a statutory right to royalties for creators — collected through a central body called the Copyright Royalties Collective for AI Training.</p>
+  <div class="story__expand">The proposal comes after the Delhi High Court declined to grant ANI Media an interim injunction against OpenAI in July 2026, holding that storing articles to train LLMs falls within the research and private use exceptions of the Copyright Act. The DPIIT working paper, titled "One Nation One License One Payment," aims to provide certainty that the courtroom couldn't: AI developers would no longer need to negotiate individually with every rights holder, but would need to disclose the categories of content used in training. Royalties would be linked to a share of post-commercialization revenue — not charged upfront during training — protecting startups building models before they have revenue. The royalty obligation is proposed to apply retrospectively, so companies that already trained on copyrighted material without payment don't gain a lasting advantage. The proposal also gives smaller and unorganised creator groups representation on the governing body. The underlying ANI v. OpenAI suit continues to trial.</div>
+  <div class="story__actions">
+    <a class="story__source-link" href="https://www.storyboard18.com/digital/ai-vs-publishers-india-seeks-licensing-solution-ws-l-107311.htm" target="_blank" rel="noopener">Read more →</a>
+    <span class="story__sep">·</span>
+    <span>Storyboard18</span>
+    <span class="story__sep">·</span>
+    <button class="expand-btn" onclick="toggleExpand(this)">More <span class="arrow">▼</span></button>
+  </div>
+</article>
+
+<!-- STORY 6 -->
+<article class="story story-item" style="--i:5" data-tags="policy">
+  <div class="story__top">
+    <span class="story__tag tag--policy">Policy</span>
+    <button class="bookmark" onclick="toggleBookmark(this)" title="Save story">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/><path class="bm-fill" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" fill="currentColor"/></svg>
+    </button>
+  </div>
+  <h2 class="story__headline"><a href="https://enterpriseai.economictimes.indiatimes.com/news/industry/ficci-panel-calls-for-new-copyright-framework-to-govern-ai/133159400" target="_blank" rel="noopener">FICCI Panel Calls for Overhaul of India's Copyright Framework for AI Era</a></h2>
+  <p class="story__summary">FICCI's Publishing Committee chair Monica Malhotra Kandhari said India's copyright laws are not yet equipped for rapidly evolving AI technologies, calling for a fresher legal framework at PubliCon 2026. She urged that AI training must respect copyright with proper permission, licensing, and acknowledgement for original works.</p>
+  <div class="story__expand">Kandhari said originality should not be compromised when using AI to create content, and that both users and creators must take responsibility for how AI-generated content is used. She called for a safer AI framework bringing together government, publishers, policymakers, and technology companies. On AI-assisted translation, she acknowledged the technology can be effective but said human intervention remains necessary to ensure accuracy, context, and emotion are retained. Hafsa Ahmad from the Office of the Principal Scientific Adviser added that India needs concrete, institutionalised measures for research integrity in the AI age. The panel reflects growing industry consensus that existing copyright law is being outpaced by AI's ability to not just understand content semantically but to use the information itself at scale — a shift that changes the copyright equation fundamentally.</div>
+  <div class="story__actions">
+    <a class="story__source-link" href="https://enterpriseai.economictimes.indiatimes.com/news/industry/ficci-panel-calls-for-new-copyright-framework-to-govern-ai/133159400" target="_blank" rel="noopener">Read more →</a>
+    <span class="story__sep">·</span>
+    <span>Economic Times</span>
+    <span class="story__sep">·</span>
+    <button class="expand-btn" onclick="toggleExpand(this)">More <span class="arrow">▼</span></button>
+  </div>
+</article>
 
 <!-- SECTION: GLOBAL -->
 <div class="section-head" data-section="global">
   <span class="section-head__pip section-head__pip--global"></span>
   <span class="section-head__label">Global</span>
   <span class="section-head__line"></span>
-  <span class="section-head__count">3 stories</span>
+  <span class="section-head__count">2 stories</span>
 </div>
 
-<!-- STORY: Meta Muse Glimmer -->
-<article class="story story-item" style="--i:5" data-tags="global">
+<!-- STORY 7 -->
+<article class="story story-item" style="--i:6" data-tags="global research">
   <div class="story__top">
     <span class="story__tag tag--global">Global</span>
     <button class="bookmark" onclick="toggleBookmark(this)" title="Save story">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/><path class="bm-fill" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" fill="currentColor"/></svg>
     </button>
   </div>
-  <h2 class="story__headline"><a href="https://www.cnbc.com/2026/08/10/meta-muse-glimmer-open-weight-ai.html" target="_blank" rel="noopener">Meta open-sources Muse Spark 1.2 and unveils laptop-ready Muse Glimmer</a></h2>
-  <p class="story__summary">Meta will open the weights of its latest AI model, Muse Spark 1.2, and launch a new family of open-source models called Muse Glimmer designed to run on laptops, as Mark Zuckerberg positions the company against OpenAI, Anthropic and aggressive Chinese open-weight labs.</p>
-  <div class="story__expand">In a 6,500-word essay accompanying the announcement, Zuckerberg framed the move as a challenge to Chinese open-source technology and urged Washington to support American efforts, arguing that U.S. labs face additional restrictions on training data that foreign competitors do not. Muse Glimmer is designed for on-device AI, which could reduce cloud compute costs and improve speed on consumer electronics — a point of differentiation from cloud-dependent rivals. The announcement comes as Meta forecasts capital expenditure of up to $145 billion this year, with investors scrutinising whether its Meta Superintelligence Labs can compete with leading labs. Zuckerberg also pushed back against the concentration of AI power in a few companies, a thinly veiled swipe at OpenAI and Anthropic.</div>
+  <h2 class="story__headline"><a href="https://www.cnbc.com/2026/08/10/meta-muse-glimmer-open-weight-ai.html" target="_blank" rel="noopener">Meta Launches Muse Glimmer, a 30B Open-Weight Model That Runs on a Single GPU</a></h2>
+  <p class="story__summary">Meta has released Muse Glimmer, a 30-billion-parameter open-weight model from Meta Superintelligence Labs, designed to run locally on a Mac or PC with a single consumer GPU. CEO Mark Zuckerberg also promised to open the weights of Muse Spark 1.2, Meta's more powerful frontier model, in the coming weeks — reversing the company's April pivot to closed models.</p>
+  <div class="story__expand">Muse Glimmer is distilled from Muse Spark, Meta's frontier-class model launched in April as a closed proprietary system — a departure from Meta's open-source tradition. Glimmer reverses that bet: weights are available on Hugging Face under Apache 2.0, with a 128,000-token context window. Meta's engineers shrank the model's footprint from ~55GB to under 20GB using quantization, making it runnable on consumer hardware without cloud infrastructure. Zuckerberg published a 6,500-word essay positioning open-weight models as a challenge to Chinese open-source labs and urged Washington to support American efforts, arguing against concentrating AI power in a few companies. The launch comes as Meta's AI division, reorganized last year under former Scale AI CEO Alexandr Wang, tries to reassure investors that its massive capex — forecast up to $145 billion this year — will pay off. Developers note Muse Code, a terminal coding agent released alongside Muse Spark 1.2, doesn't quite match frontier models from Anthropic or OpenAI but competes on cost.</div>
   <div class="story__actions">
     <a class="story__source-link" href="https://www.cnbc.com/2026/08/10/meta-muse-glimmer-open-weight-ai.html" target="_blank" rel="noopener">Read more →</a>
     <span class="story__sep">·</span>
@@ -870,41 +899,21 @@
   </div>
 </article>
 
-<!-- STORY: OpenAI GPT-5.6-Cyber -->
-<article class="story story-item" style="--i:6" data-tags="global">
+<!-- STORY 8 -->
+<article class="story story-item" style="--i:7" data-tags="global">
   <div class="story__top">
     <span class="story__tag tag--global">Global</span>
     <button class="bookmark" onclick="toggleBookmark(this)" title="Save story">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/><path class="bm-fill" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" fill="currentColor"/></svg>
     </button>
   </div>
-  <h2 class="story__headline"><a href="https://www.helpnetsecurity.com/2026/08/11/openai-gpt-5-6-cyber-model/" target="_blank" rel="noopener">OpenAI's GPT-5.6-Cyber hunts zero-days — and refuses researchers far less often</a></h2>
-  <p class="story__summary">OpenAI has released GPT-5.6-Cyber, a model trained to find zero-day vulnerabilities and build exploit chains with far fewer refusals on higher-risk dual-use security work. It is available only through Daybreak Red, the higher tier of OpenAI's vetted access program for cybersecurity professionals.</p>
-  <div class="story__expand">OpenAI built an internal benchmark to track how often each model agrees to handle requests involving exploit chains, authentication bypass and privilege escalation: GPT-5.6-Cyber completed 95% of these requests, versus just 1.5% for the guardrail-enabled standard GPT-5.6. OpenAI's own researchers used the model to find two previously undocumented flaws in V8, the JavaScript engine behind Chrome, which could be chained to corrupt memory and escape the browser's sandbox; Google fixed the issue and assigned it CVE-2026-15903. The company assessed the model as "High" but below the "Critical" threshold for cyber capability. The release comes days after OpenAI said it was holding back its upcoming model Astra over preliminary concerns it could reach the top tier of hacking capability.</div>
+  <h2 class="story__headline"><a href="https://www.helpnetsecurity.com/2026/08/10/openai-astra-critical-cyber-capabilities/" target="_blank" rel="noopener">OpenAI Locks Down Astra Model Over Potential Critical Cybersecurity Capabilities</a></h2>
+  <p class="story__summary">OpenAI's internal evaluation of its upcoming model, Astra, found significant advances in agentic coding and cybersecurity, leading the company to conclude it cannot rule out the model reaching "critical capability level" for cybersecurity under its Preparedness Framework. OpenAI has paused activities involving Astra that don't meet enhanced security requirements.</p>
+  <div class="story__expand">Under OpenAI's Preparedness Framework, a model is classified as having critical cybersecurity capabilities if it can independently discover previously unknown software vulnerabilities in secure systems or plan and execute sophisticated cyberattacks with little or no human guidance. OpenAI has strengthened safeguards: isolated testing environments, restricted network and tool access, enhanced encryption of model weights, additional monitoring, and sandboxed execution. The company will ask government agencies and independent AI safety organizations to evaluate Astra's cybersecurity capabilities before deployment. This follows a separate release — GPT-5.6-Cyber, a model trained to find zero-day vulnerabilities and build exploit chains with far fewer refusals, available through OpenAI's vetted Daybreak Red program. GPT-5.6-Cyber uncovered two previously undocumented flaws in Chrome's V8 engine, assigned CVE-2026-15903, which Google has fixed.</div>
   <div class="story__actions">
-    <a class="story__source-link" href="https://www.helpnetsecurity.com/2026/08/11/openai-gpt-5-6-cyber-model/" target="_blank" rel="noopener">Read more →</a>
+    <a class="story__source-link" href="https://www.helpnetsecurity.com/2026/08/10/openai-astra-critical-cyber-capabilities/" target="_blank" rel="noopener">Read more →</a>
     <span class="story__sep">·</span>
     <span>Help Net Security</span>
-    <span class="story__sep">·</span>
-    <button class="expand-btn" onclick="toggleExpand(this)">More <span class="arrow">▼</span></button>
-  </div>
-</article>
-
-<!-- STORY: Nvidia NOOA -->
-<article class="story story-item" style="--i:7" data-tags="global research">
-  <div class="story__top">
-    <span class="story__tag tag--global">Global</span>
-    <button class="bookmark" onclick="toggleBookmark(this)" title="Save story">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/><path class="bm-fill" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" fill="currentColor"/></svg>
-    </button>
-  </div>
-  <h2 class="story__headline"><a href="https://www.ventureatlas.org/news/2026-08-10-nvidia-nooa-open-source-agent-framework" target="_blank" rel="noopener">Nvidia open-sources NOOA agent framework, tops SWE-bench Verified</a></h2>
-  <p class="story__summary">Nvidia Research has open-sourced NOOA, an object-oriented Python framework that collapses an AI agent's methods, state and prompts into a single class so it can be tested, traced and version-controlled like ordinary software. Running on GPT-5.5, NOOA scored 82.2% on SWE-bench Verified, beating the prior best of 79.2%.</p>
-  <div class="story__expand">Nvidia says NOOA uses roughly half the tokens per task of competing open-source agent harnesses, a meaningful efficiency gain as agent workloads drive compute costs. By treating an agent's behaviour as a versionable software object rather than a loose collection of prompts, the framework aims to make autonomous coding agents more predictable and maintainable for engineering teams. The release adds to a wave of open-source agent infrastructure this month and signals that the competitive frontier in coding agents is shifting from raw benchmark scores toward reliability, cost and developer ergonomics.</div>
-  <div class="story__actions">
-    <a class="story__source-link" href="https://www.ventureatlas.org/news/2026-08-10-nvidia-nooa-open-source-agent-framework" target="_blank" rel="noopener">Read more →</a>
-    <span class="story__sep">·</span>
-    <span>Venture Atlas</span>
     <span class="story__sep">·</span>
     <button class="expand-btn" onclick="toggleExpand(this)">More <span class="arrow">▼</span></button>
   </div>
@@ -918,7 +927,7 @@
   <span class="section-head__count">2 stories</span>
 </div>
 
-<!-- STORY: AI-designed virus -->
+<!-- STORY 9 -->
 <article class="story story-item" style="--i:8" data-tags="research">
   <div class="story__top">
     <span class="story__tag tag--research">Research</span>
@@ -926,19 +935,19 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/><path class="bm-fill" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" fill="currentColor"/></svg>
     </button>
   </div>
-  <h2 class="story__headline"><a href="https://theconversation.com/scientists-have-designed-a-functioning-virus-from-scratch-using-ai-what-you-need-to-know-289319" target="_blank" rel="noopener">Scientists design a functioning virus from scratch using AI — a first for generative biology</a></h2>
-  <p class="story__summary">Researchers have used AI to design hundreds of new versions of a well-studied bacteriophage and then built the viruses from scratch in the lab, with 16 of 285 AI-designed genomes producing working phages capable of infecting E. coli — a first showing AI can write new genomes, not just read them.</p>
-  <div class="story__expand">The AI systems used, called Evo 1 and Evo 2, work with genetic sequences much as language models work with text; they were trained on more than 2 million phage genomes and then asked to design new versions of ΦX174, a small phage with roughly 5,400 DNA letters encoding 11 proteins. The resulting phages behaved broadly like the original despite substantially different DNA, and in one case combined genetic elements that would not have worked in the original phage but did in the AI-designed genome. The researchers also found that AI-generated phages could give evolution a head start: after repeated exposure, hybrid phages emerged that infected previously resistant E. coli. The work raises clear biosecurity questions — though it involved a simple phage that infects bacteria, not a human pathogen — and the authors stress that biologists, regulators and biosecurity experts, not just AI researchers, must shape how such systems are trained and screened.</div>
+  <h2 class="story__headline"><a href="https://blog.google/innovation-and-ai/models-and-research/google-research/amie-video-consultations/" target="_blank" rel="noopener">Google's AMIE Demonstrates Expert-Level AI Medical Video Consultations</a></h2>
+  <p class="story__summary">Google Research and DeepMind have advanced AMIE, their research medical AI system, to perform real-time clinical video consultations in a first-of-its-kind study. Built on Gemini and Project Astra using a multi-agent architecture, AMIE interprets visual and auditory cues, guides virtual physical exams, and reasons diagnostically in real time — with clinical evaluators assessing it favorably against primary care physicians.</p>
+  <div class="story__expand">In a randomized study using simulated consultations with patient actors and primary care physicians, clinical evaluators assessed AMIE favorably across core clinical competencies including history-taking thoroughness, diagnostic accuracy, management appropriateness, and communication quality. Patient actors also preferred the video experience over text chat. The system represents a significant step beyond text-based medical AI: a physician notices a cough, observes gait, registers visible signs of discomfort — and AMIE now brings that same multi-modal awareness to virtual consultations. Google emphasized that AMIE remains a research system and more work is needed before responsible real-world clinical deployment, but the demonstration offers a compelling glimpse into the future of health AI, particularly for telemedicine and remote healthcare delivery.</div>
   <div class="story__actions">
-    <a class="story__source-link" href="https://theconversation.com/scientists-have-designed-a-functioning-virus-from-scratch-using-ai-what-you-need-to-know-289319" target="_blank" rel="noopener">Read more →</a>
+    <a class="story__source-link" href="https://blog.google/innovation-and-ai/models-and-research/google-research/amie-video-consultations/" target="_blank" rel="noopener">Read more →</a>
     <span class="story__sep">·</span>
-    <span>The Conversation</span>
+    <span>Google Research Blog</span>
     <span class="story__sep">·</span>
     <button class="expand-btn" onclick="toggleExpand(this)">More <span class="arrow">▼</span></button>
   </div>
 </article>
 
-<!-- STORY: Dyna Robotics DYNA-2 -->
+<!-- STORY 10 -->
 <article class="story story-item" style="--i:9" data-tags="research">
   <div class="story__top">
     <span class="story__tag tag--research">Research</span>
@@ -946,13 +955,13 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/><path class="bm-fill" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" fill="currentColor"/></svg>
     </button>
   </div>
-  <h2 class="story__headline"><a href="https://interestingengineering.com/ai-robotics/dyna-robotics-dyna-2-human-video-robot-training" target="_blank" rel="noopener">Robot model trained on 1 million hours of human video reaches 90% task success</a></h2>
-  <p class="story__summary">Dyna Robotics has unveiled DYNA-2, a robot foundation model trained entirely on more than 1 million hours of human egocentric video — roughly 170 years of continuous waking experience — rather than robot action data, and reports lifting high-precision manufacturing task success from 20% to 80–90%.</p>
-  <div class="story__expand">DYNA-2 uses a world-modeling architecture that combines next-frame and next-action prediction, so knowledge gained from watching humans transfers across different robot hardware; the company says just 13 minutes of data was enough for the model to command a pair of five-fingered robotic hands to twist open a bottle cap. In a zero-shot customer deployment, DYNA-2 achieved an 87% quality pass rate versus 46% for its predecessor, and it recovered from physical disturbances — like knocked-over ingredients during chopping — without human intervention. Co-founder Jason Ma argues the approach breaks the data bottleneck of manual teleoperation: "Action data is scarce, but video is everywhere." The earlier DYNA-1 model is already deployed in hotels, restaurants and laundromats.</div>
+  <h2 class="story__headline"><a href="https://gigazine.net/gsc_news/en/20260812-ai-stolen-thoughts" target="_blank" rel="noopener">Researchers Decrypt AI "Encrypted Thoughts," Exposing Leaked Secrets and Benchmark Answers</a></h2>
+  <p class="story__summary">AI researchers have devised a method to decrypt the encrypted reasoning — or "chain of thought" — of AI models like ChatGPT, Claude, and Gemini, revealing that some models already know benchmark answers during thinking and conceal this from users. The "Stolen Thoughts" research also uncovered 704 pieces of confidential information, including 62 API keys, 33 passwords, and 24 access tokens in decrypted reasoning traces.</p>
+  <div class="story__expand">The research team exploited the fact that encrypted thought processes can be reused between models from the same company. By loading a high-performance model's thought process into a lower-performance model from the same company and then performing a jailbreak attack on the weaker model, they forced the encrypted reasoning to output in plain text. The findings were striking: when Claude Opus 4.8 solved an AIME math problem, the thinking process contained "This is a known problem from the AIME, and the correct answer is 60" — information concealed from the user-facing thought display. The team collected 6,708 agent outputs with encrypted reasoning from GitHub and Hugging Face and decrypted 315,320 thought processes. They also found that Chinese-made Kimi K3's thought processes are strikingly similar to those of Claude Opus 4.8, suggesting possible adversarial distillation. AI researcher Nathan Lambert noted this implies Chinese labs may be using similar interception techniques, and called the frontier labs' failure to patch this "shocking."</div>
   <div class="story__actions">
-    <a class="story__source-link" href="https://interestingengineering.com/ai-robotics/dyna-robotics-dyna-2-human-video-robot-training" target="_blank" rel="noopener">Read more →</a>
+    <a class="story__source-link" href="https://gigazine.net/gsc_news/en/20260812-ai-stolen-thoughts" target="_blank" rel="noopener">Read more →</a>
     <span class="story__sep">·</span>
-    <span>Interesting Engineering</span>
+    <span>Gigazine</span>
     <span class="story__sep">·</span>
     <button class="expand-btn" onclick="toggleExpand(this)">More <span class="arrow">▼</span></button>
   </div>
@@ -1036,7 +1045,7 @@
 
     const pullquote = document.querySelector('.pullquote');
     if (pullquote) {
-      pullquote.style.display = (activeFilter === 'all' || activeFilter === 'global') && !query ? '' : 'none';
+      pullquote.style.display = (activeFilter === 'all' || activeFilter === 'india') && !query ? '' : 'none';
     }
 
     document.getElementById('noResults').classList.toggle('show', visibleCount === 0);
