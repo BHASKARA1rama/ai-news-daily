@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>AI News Daily — August 26, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --font-serif: 'Lora', Georgia, 'Times New Roman', serif;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+
+    color-scheme: light;
+    --bg: #f0eee6;
+    --bg-alt: #faf9f5;
+    --surface: #ffffff;
+    --surface-hover: #f7f6f1;
+    --border: #e3e0d7;
+    --border-subtle: #ebe9e1;
+    --text: #2d2b27;
+    --text-secondary: #59554e;
+    --text-tertiary: #8a8579;
+    --accent: #c2714c;
+    --accent-hover: #a85f3e;
+    --accent-light: #f3e8e0;
+    --accent-bg: #faf3ee;
+
+    --india: #c44d3a;
+    --india-bg: rgba(196,77,58,0.08);
+    --global: #4a7ba8;
+    --global-bg: rgba(74,123,168,0.08);
+    --research: #4a8a6a;
+    --research-bg: rgba(74,138,106,0.08);
+    --policy: #a87c2e;
+    --policy-bg: rgba(168,124,46,0.08);
+
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.06);
+    --shadow-lg: 0 8px 30px rgba(0,0,0,0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    overflow-wrap: break-word;
+  }
+
+  a { color: var(--accent); text-decoration: none; transition: color 0.15s ease; }
+  a:hover { color: var(--accent-hover); }
+
+  /* Reading progress bar */
+  .progress-bar {
+    position: fixed;
+    top: 0; left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+    z-index: 200;
+    transition: width 0.1s ease-out;
+    border-radius: 0 2px 2px 0;
+  }
+
+  /* Top bar */
+  .topbar {
+    background: var(--bg-alt);
+    border-bottom: 1px solid var(--border);
+    padding: 0.85rem 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  .topbar-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--text);
+    cursor: pointer;
+    transition: opacity 0.15s ease;
+  }
+  .logo:hover { opacity: 0.8; }
+  .logo__icon {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-size: 0.85rem; font-weight: 700;
+    font-family: var(--font-sans);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .logo:hover .logo__icon { transform: rotate(360deg); }
+  .logo span { color: var(--accent); }
+  .topbar__right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .topbar__date {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-tertiary);
+  }
+  .bookmarks-btn {
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.35rem 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-tertiary);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  .bookmarks-btn:hover {
+    background: var(--surface);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .bookmarks-btn .bm-count {
+    background: var(--accent);
+    color: white;
+    border-radius: 10px;
+    padding: 0.1rem 0.4rem;
+    font-size: 0.62rem;
+    font-weight: 600;
+    min-width: 18px;
+    text-align: center;
+  }
+  .bookmarks-btn:has(.bm-count:empty) .bm-count { display: none; }
+
+  /* Hero */
+  .hero {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 1.5rem;
+  }
+  .hero__label {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.8rem;
+  }
+  .hero__title {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin-bottom: 1rem;
+  }
+  .hero__subtitle {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    max-width: 580px;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Stats row */
+  .stats {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+  .stat__value {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--text);
+  }
+  .stat__label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+  }
+
+  /* Toolbar: search + filters */
+  .toolbar {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.5rem 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .search-wrap {
+    position: relative;
+  }
+  .search-wrap svg {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px; height: 16px;
+    color: var(--text-tertiary);
+    pointer-events: none;
+  }
+  .search {
+    width: 100%;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    padding: 0.7rem 1rem 0.7rem 2.6rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--surface);
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+  .search:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-light);
+  }
+  .search::placeholder { color: var(--text-tertiary); }
+
+  .filters {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .filter-btn {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    padding: 0.35rem 0.85rem;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: var(--surface);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .filter-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .filter-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: white;
+  }
+  .filter-btn .filter-pip {
+    width: 6px; height: 6px; border-radius: 50%;
+  }
+  .filter-btn[data-filter="india"] .filter-pip { background: var(--india); }
+  .filter-btn[data-filter="global"] .filter-pip { background: var(--global); }
+  .filter-btn[data-filter="research"] .filter-pip { background: var(--research); }
+  .filter-btn[data-filter="policy"] .filter-pip { background: var(--policy); }
+  .filter-btn.active .filter-pip { background: white; opacity: 0.8; }
+
+  /* Editor's note */
+  .editors-note {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.5rem 1.5rem 1rem;
+  }
+  .editors-note__box {
+    background: var(--accent-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.3rem 1.5rem;
+  }
+  .editors-note__label {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+  .editors-note__text {
+    font-family: var(--font-serif);
+    font-size: 1.02rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    font-style: italic;
+  }
+
+  /* Main */
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0.5rem 1.5rem 3rem;
+  }
+
+  /* Section header */
+  .section-head {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin: 2.2rem 0 1rem;
+  }
+  .section-head__pip {
+    width: 7px; height: 7px; border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .section-head__pip--india { background: var(--india); }
+  .section-head__pip--global { background: var(--global); }
+  .section-head__pip--research { background: var(--research); }
+  .section-head__pip--policy { background: var(--policy); }
+  .section-head__label {
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+  .section-head__line {
+    flex: 1; height: 1px; background: var(--border-subtle);
+  }
+  .section-head__count {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--text-tertiary);
+  }
+
+  /* Featured story */
+  .featured {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.6rem 1.8rem;
+    margin-bottom: 1rem;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    animation: fadeUp 0.5s ease-out both;
+    position: relative;
+  }
+  .featured:hover {
+    box-shadow: var(--shadow-md);
+  }
+  .featured__label {
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.6rem;
+  }
+  .featured .story__headline { font-size: 1.5rem; }
+
+  /* Story */
+  article.story {
+    background: var(--surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 1.4rem 1.5rem;
+    margin-bottom: 0.75rem;
+    animation: fadeUp 0.5s ease-out both;
+    animation-delay: calc(var(--i, 0) * 0.06s);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+  }
+  article.story:hover {
+    border-color: var(--border);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .story__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .story__tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    font-weight: 500;
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+  }
+  .tag--india { background: var(--india-bg); color: var(--india); }
+  .tag--global { background: var(--global-bg); color: var(--global); }
+  .tag--research { background: var(--research-bg); color: var(--research); }
+  .tag--policy { background: var(--policy-bg); color: var(--policy); }
+
+  /* Bookmark button */
+  .bookmark {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.2rem;
+    color: var(--text-tertiary);
+    transition: color 0.15s ease, transform 0.15s ease;
+    flex-shrink: 0;
+  }
+  .bookmark:hover { color: var(--accent); transform: scale(1.15); }
+  .bookmark.bookmarked { color: var(--accent); }
+  .bookmark svg { width: 18px; height: 18px; }
+  .bookmark .bm-fill { transition: opacity 0.15s ease; opacity: 0; }
+  .bookmark.bookmarked .bm-fill { opacity: 1; }
+
+  .story__headline {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.5rem;
+  }
+  .story__headline a { color: var(--text); }
+  .story__headline a:hover { color: var(--accent); }
+
+  .story__summary {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+    max-width: 68ch;
+  }
+
+  .story__expand {
+    display: none;
+    font-size: 0.93rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+    max-width: 68ch;
+    animation: expandIn 0.3s ease-out;
+  }
+  article.story.expanded .story__expand { display: block; }
+  article.story.expanded .story__summary {
+    margin-bottom: 0.4rem;
+  }
+
+  .story__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-tertiary);
+  }
+  .story__source-link {
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .story__source-link:hover { text-decoration: underline; }
+  .story__sep { opacity: 0.4; }
+  .expand-btn {
+    background: none;
+    border: none;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-tertiary);
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.15s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+  }
+  .expand-btn:hover { color: var(--accent); }
+  .expand-btn .arrow {
+    transition: transform 0.2s ease;
+    font-size: 0.6rem;
+  }
+  article.story.expanded .expand-btn .arrow {
+    transform: rotate(180deg);
+  }
+
+  /* Pull quote */
+  .pullquote {
+    margin: 1.8rem 0;
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    border-left: 2px solid var(--accent);
+    animation: fadeUp 0.5s ease-out both;
+    animation-delay: 0.3s;
+  }
+  .pullquote p {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--text);
+  }
+  .pullquote cite {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    font-style: normal;
+    color: var(--text-tertiary);
+    margin-top: 0.5rem;
+  }
+
+  /* No results */
+  .no-results {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--text-tertiary);
+    font-family: var(--font-serif);
+    font-style: italic;
+    display: none;
+  }
+  .no-results.show { display: block; }
+
+  /* Back to top */
+  .back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    z-index: 90;
+  }
+  .back-to-top.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .back-to-top:hover {
+    transform: translateY(-3px);
+    background: var(--accent-hover);
+  }
+  .back-to-top svg { width: 20px; height: 20px; }
+
+  /* Footer */
+  footer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+    border-top: 1px solid var(--border);
+  }
+  .footer__top {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.7rem;
+  }
+  .footer__logo {
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: inline-flex;
+    align-items: center; justify-content: center;
+    color: white; font-size: 0.7rem; font-weight: 700;
+  }
+  .footer__brand {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  .footer__brand span { color: var(--accent); }
+  .footer__info {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+  }
+  .footer__disclaimer {
+    font-size: 0.83rem;
+    color: var(--text-tertiary);
+    margin-top: 0.7rem;
+    max-width: 60ch;
+    line-height: 1.55;
+  }
+
+  /* Toast notification */
+  .toast {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: var(--text);
+    color: var(--bg-alt);
+    padding: 0.7rem 1.3rem;
+    border-radius: 10px;
+    font-size: 0.82rem;
+    font-family: var(--font-sans);
+    box-shadow: var(--shadow-lg);
+    z-index: 150;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    pointer-events: none;
+    white-space: nowrap;
+  }
+  .toast.show {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  /* Highlight search match */
+  mark {
+    background: var(--accent-light);
+    color: var(--accent-hover);
+    border-radius: 2px;
+    padding: 0 2px;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes expandIn {
+    from { opacity: 0; max-height: 0; }
+    to { opacity: 1; max-height: 500px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .hero { padding: 2rem 1.25rem 1rem; }
+    .hero__title { font-size: 1.6rem; }
+    .hero__subtitle { font-size: 1.05rem; }
+    .stats { gap: 1rem; flex-wrap: wrap; }
+    .toolbar, .editors-note, main, footer { padding-left: 1.25rem; padding-right: 1.25rem; }
+    .featured { padding: 1.2rem 1.3rem; }
+    .featured .story__headline { font-size: 1.2rem; }
+    article.story { padding: 1.1rem 1.2rem; }
+    .story__headline { font-size: 1.1rem; }
+    .pullquote p { font-size: 1.1rem; }
+    .back-to-top { bottom: 1rem; right: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<nav class="topbar">
+  <div class="topbar-inner">
+    <div class="logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+      <span class="logo__icon">A</span>
+      AI News <span>Daily</span>
+    </div>
+    <div class="topbar__right">
+      <div class="topbar__date">Aug 26, 2026</div>
+      <button class="bookmarks-btn" id="bookmarksBtn" onclick="toggleBookmarksView()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg>
+        Saved <span class="bm-count" id="bmCount">0</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero__label">The Daily Brief</div>
+  <h1 class="hero__title">India Builds, the World Models: A Day of Compute, Courts and Open Weights</h1>
+  <p class="hero__subtitle">From a 9,000-GPU factory in Hyderabad to a mystery model no one will claim, today's AI news splits between nations investing in infrastructure and labs shipping weights that anyone can run.</p>
+  <div class="stats">
+    <div class="stat"><div class="stat__value">10</div><div class="stat__label">Stories</div></div>
+    <div class="stat"><div class="stat__value">9</div><div class="stat__label">Sources</div></div>
+    <div class="stat"><div class="stat__value">4</div><div class="stat__label">Sections</div></div>
+    <div class="stat"><div class="stat__value">9 min</div><div class="stat__label">Read time</div></div>
+  </div>
+</header>
+
+<div class="toolbar">
+  <div class="search-wrap">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+    <input type="text" class="search" id="searchInput" placeholder="Search stories by keyword..." />
+  </div>
+  <div class="filters">
+    <button class="filter-btn active" data-filter="all" onclick="setFilter('all')">All</button>
+    <button class="filter-btn" data-filter="india" onclick="setFilter('india')"><span class="filter-pip"></span>India</button>
+    <button class="filter-btn" data-filter="global" onclick="setFilter('global')"><span class="filter-pip"></span>Global</button>
+    <button class="filter-btn" data-filter="research" onclick="setFilter('research')"><span class="filter-pip"></span>Research</button>
+    <button class="filter-btn" data-filter="policy" onclick="setFilter('policy')"><span class="filter-pip"></span>Policy</button>
+  </div>
+</div>
+
+<div class="editors-note">
+  <div class="editors-note__box">
+    <div class="editors-note__label">Editor's Note</div>
+    <p class="editors-note__text">Today's signal is a widening split in who holds AI power. India's government is buying compute, drafting court rules and standardising healthcare AI, yet a survey shows 94% of Indians only use AI — only 20% build with it. Meanwhile an anonymous model appeared on OpenRouter with no maker named, and two major open-weight releases landed. The story of the day is infrastructure versus access.</p>
+  </div>
+</div>
+
+<main id="stories">
+
+<!-- SECTION: INDIA -->
+<div class="section-head" data-section="india">
+  <span class="section-head__pip section-head__pip--india"></span>
+  <span class="section-head__label">India</span>
+  <span class="section-head__line"></span>
+  <span class="section-head__count">3 stories</span>
+</div>
+
+<!-- FEATURED TOP STORY -->
+<article class="featured story-item" style="--i:0" data-tags="india policy">
+  <div class="featured__label">★ Top Story</div>
+  <div class="story__top">
+    <span class="story__tag tag--india">India</span>
+    <button class="bookmark" onclick="toggleBookmark(this)" title="Save story">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/><path class="bm-fill" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" fill="currentColor"/></svg>
+    </button>
+  </div>
+  <h2 class="story__headline"><a href="https://theprint.in/tech/exclusive-govt-reopens-tender-for-ai-tools-to-summarise-cabinet-notes-run-facial-attendance/3024422/" target="_blank" rel="noopener">Centre reopens tender for AI tools to summarise Cabinet notes and run facial attendance</a></h2>
+  <p class="story__summary">The National e-Governance Division has reopened a Request for Empanelment seeking AI tools that can summarise Cabinet notes, verify identity through facial checks with liveness detection, and power software agents inside DigiLocker — all while requiring government data to stay within India.</p>
+  <div class="story__expand">The reopened RFE, issued on 13 August under MeitY's Digital India programme, also lists foreign commercial AI services including OpenAI, Anthropic, Google, AWS and Azure among models the deployed systems may connect to — even though those providers are reached over the internet from outside India. The document's "adaptive inference layer" is designed to switch between paid commercial models and open-source models like LLaMA and Mistral that NeGD would host itself. The tender carries a Rule 144(xi) certification barring bidders from countries sharing a land border with India. Proposals are due by 7 September, and the panel runs until April 2028.</div>
+  <div class="story__actions">
+    <a class="story__source-link" href="https://theprint.in/tech/exclusive-govt-reopens-tender-for-ai-tools-to-summarise-cabinet-notes-run-facial-attendance/3024422/" target="_blank" rel="noopener">Read full story →</a>
+    <span class="story__sep">·</span>
+    <span>ThePrint</span>
+    <span class="story__sep">·</span>
+    <button class="expand-btn" onclick="toggleExpand(this)">More <span class="arrow">▼</span></button>
+  </div>
+</article>
+
+<article class="story story-item" style="--i:1" data-tags="india">
+  <div class="story__top">
+    <span class="story__tag tag--india">India</span>
+    <button class="bookmark" onclick="toggleBookmark(this)" title="Save story">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/><path class="bm-fill" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" fill="currentColor"/></svg>
+    </button>
+  </div>
+  <h2 class="story__headline"><a href="https://timesofindia.indiatimes.com/city/hyderabad/am-intelligence-to-deploy-one-of-asias-1st-nvidia-vera-rubin-gpu-clusters-at-hyderabad-ai-factory/articleshow/133517338.cms" target="_blank" rel="noopener">AM Intelligence orders 9,000 NVIDIA Rubin GPUs for Hyderabad AI factory</a></h2>
+  <p class="story__summary">Greenko-founder-backed AM Intelligence has placed a binding order for 9,000 NVIDIA Rubin GPUs, positioning its first Hyderabad facility among Asia's earliest Vera Rubin frontier compute clusters and the first tranche of a planned 1 gigawatt buildout.</p>
+  <div class="story__expand">The GPUs will arrive as NVIDIA Vera Rubin NVL72 rack-scale systems in Q1 2027, delivering roughly 450 exaFLOPS of NVFP4 inference compute. The Hyderabad site starts at 30 MW and forms part of a $8 billion-plus capex plan spanning India, the United States, Finland and Malaysia, with 5 GW of powered, liquid-cooled AI data centres under development. Chairman Anil Chalamalasetty framed the move as converting power infrastructure into AI compute at scale — aimed at trillion-parameter models and agentic workloads, and at lowering token-serving costs for Indian developers locally.</div>
+  <div class="story__actions">
+    <a class="story__source-link" href="https://timesofindia.indiatimes.com/city/hyderabad/am-intelligence-to-deploy-one-of-asias-1st-nvidia-vera-rubin-gpu-clusters-at-hyderabad-ai-factory/articleshow/133517338.cms" target="_blank" rel="noopener">Read more →</a>
+    <span class="story__sep">·</span>
+    <span>The Times of India</span>
+    <span class="story__sep">·</span>
+    <button class="expand-btn" onclick="toggleExpand(this)">More <span class="arrow">▼</span></button>
+  </div>
+</article>
+
+<article class="story story-item" style="--i:2" data-tags="india">
+  <div class="story__top">
+    <span class="story__tag tag--india">India</span>
+    <button class="bookmark" onclick="toggleBookmark(this)" title="Save story">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/><path class="bm-fill" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" fill="currentColor"/></svg>
+    </button>
+  </div>
+  <h2 class="story__headline"><a href="https://www.businesstoday.in/technology/artificial-intelligence/story/94-of-indians-use-ai-but-only-20-build-with-it-why-the-ai-skills-gap-is-widening-551328-2026-08-25" target="_blank" rel="noopener">94% of Indians use AI, but only 20% build with it: the skills gap widening fast</a></h2>
+  <p class="story__summary">A survey of 2,075 people finds 94% of Indians use AI tools, yet only 20% have ever built an AI-powered application, agent or automation — exposing a widening gap between consumption and creation even as 87% of organisations actively use AI solutions.</p>
+  <div class="story__expand">Just 26% use APIs or connect AI to other services, and only 26% build with it. The gap sits inside booming adoption: 88% of firms used AI in at least one business function in 2025 and student generative-AI adoption reached 84%. LinkedIn's AI Skill Penetration Index ranks India at 3.0 — skills appear three times more often than the global average — but a 2026 SHRM India report flags AI, digital and data skills as a major gap for 45% of firms. The emerging priority is shifting from prompting toward programming, machine learning, data science and API integration, with 87% of respondents now pursuing or planning upskilling.</div>
+  <div class="story__actions">
+    <a class="story__source-link" href="https://www.businesstoday.in/technology/artificial-intelligence/story/94-of-indians-use-ai-but-only-20-build-with-it-why-the-ai-skills-gap-is-widening-551328-2026-08-25" target="_blank" rel="noopener">Read more →</a>
+    <span class="story__sep">·</span>
+    <span>Business Today</span>
+    <span class="story__sep">·</span>
+    <button class="expand-btn" onclick="toggleExpand(this)">More <span class="arrow">▼</span></button>
+  </div>
+</article>
+
+<!-- PULL QUOTE -->
+<div class="pullquote">
+  <p>"For India, AI is not just Artificial Intelligence, it is All Inclusive."</p>
+  <cite>— Prime Minister Narendra Modi's vision, cited by MoS Health Anupriya Patel at the SAHI framework roundtable</cite>
+</div>
+
+<!-- SECTION: POLICY -->
+<div class="section-head" data-section="policy">
+  <span class="section-head__pip section-head__pip--policy"></span>
+  <span class="section-head__label">Policy & Regulation</span>
+  <span class="section-head__line"></span>
+  <span class="section-head__count">2 stories</span>
+</div>
+
+<article class="story story-item" style="--i:3" data-tags="policy india">
+  <div class="story__top">
+    <span class="story__tag tag--policy">Policy</span>
+    <button class="bookmark" onclick="toggleBookmark(this)" title="Save story">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/><path class="bm-fill" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" fill="currentColor"/></svg>
+    </button>
+  </div>
+  <h2 class="story__headline"><a href="https://completeaitraining.com/news/india-launches-sahi-framework-to-guide-responsible-ai-use/" target="_blank" rel="noopener">India launches SAHI framework to guide responsible AI in healthcare</a></h2>
+  <p class="story__summary">The health ministry is launching the Strategy for AI in Healthcare for India (SAHI), a national framework to standardise responsible AI adoption across the country's medical system — from disease surveillance to diagnosis and treatment.</p>
+  <div class="story__expand">MoS Health Anupriya Patel announced SAHI at a roundtable titled "Innovation to Impact — AI as a Public Health Gamechanger" in New Delhi, with a formal launch at the AI Impact Summit 2026. Patel said India has already integrated AI across the entire health sector and that the framework will support responsible adoption at every level, signalling a shift from pilots to standard practice. The framing leans on the Prime Minister's "All Inclusive" view of AI, prioritising equitable access alongside technological progress, and gives hospitals and clinics a shared set of national standards for deploying AI tools.</div>
+  <div class="story__actions">
+    <a class="story__source-link" href="https://completeaitraining.com/news/india-launches-sahi-framework-to-guide-responsible-ai-use/" target="_blank" rel="noopener">Read more →</a>
+    <span class="story__sep">·</span>
+    <span>Complete AI Training</span>
+    <span class="story__sep">·</span>
+    <button class="expand-btn" onclick="toggleExpand(this)">More <span class="arrow">▼</span></button>
+  </div>
+</article>
+
+<article class="story story-item" style="--i:4" data-tags="policy india">
+  <div class="story__top">
+    <span class="story__tag tag--policy">Policy</span>
+    <button class="bookmark" onclick="toggleBookmark(this)" title="Save story">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/><path class="bm-fill" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" fill="currentColor"/></svg>
+    </button>
+  </div>
+  <h2 class="story__headline"><a href="https://www.forbesindia.com/article/thought-leadership/iim-kozhikode/indias-ai-court-regulations-put-judicial-accountability-first/2997405/1" target="_blank" rel="noopener">Supreme Court's draft AI court regulations put judicial accountability first</a></h2>
+  <p class="story__summary">The Supreme Court's draft Regulations for Use of Artificial Intelligence in Courts, 2026 seek to keep AI on a leash of the judiciary's own making — permitting AI to assist but prohibiting it from replacing a judge in deciding cases, setting bail or predicting future conduct.</p>
+  <div class="story__expand">The draft pairs a presumption in favour of responsible adoption with firm prohibitions where liberty is at stake, banning opaque "black-box" systems where rights are involved. Its organising idea is human primacy: AI may assist the court but cannot become the court. A national apex body, supported by AI committees and secretariats, would approve tools, set standards, audit systems and report publicly. Analysts note the framework is built around the constitutional test of proportionality, but flag its deepest gap — it rests on institutional trust rather than the trust of litigants affected, with grievance routes thinly drawn for flawed but permitted tools.</div>
+  <div class="story__actions">
+    <a class="story__source-link" href="https://www.forbesindia.com/article/thought-leadership/iim-kozhikode/indias-ai-court-regulations-put-judicial-accountability-first/2997405/1" target="_blank" rel="noopener">Read more →</a>
+    <span class="story__sep">·</span>
+    <span>Forbes India</span>
+    <span class="story__sep">·</span>
+    <button class="expand-btn" onclick="toggleExpand(this)">More <span class="arrow">▼</span></button>
+  </div>
+</article>
+
+<!-- SECTION: GLOBAL -->
+<div class="section-head" data-section="global">
+  <span class="section-head__pip section-head__pip--global"></span>
+  <span class="section-head__label">Global</span>
+  <span class="section-head__line"></span>
+  <span class="section-head__count">2 stories</span>
+</div>
+
+<article class="story story-item" style="--i:5" data-tags="global">
+  <div class="story__top">
+    <span class="story__tag tag--global">Global</span>
+    <button class="bookmark" onclick="toggleBookmark(this)" title="Save story">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/><path class="bm-fill" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" fill="currentColor"/></svg>
+    </button>
+  </div>
+  <h2 class="story__headline"><a href="https://www.euronews.com/next/2026/08/25/mysterious-ultra-powerful-ai-system-emerges-as-china-continues-to-give-western-ai-a-run-fo" target="_blank" rel="noopener">Mystery "Ox Alpha" AI model appears on OpenRouter — and no one knows who built it</a></h2>
+  <p class="story__summary">A strange, ultra-powerful AI system called Ox Alpha dropped on OpenRouter as an anonymous proprietary stealth model on 20 August, creating confusion among analysts and users — with suspicions it may belong to Zhipu AI's unreleased GLM-5.x series, though unconfirmed.</p>
+  <div class="story__expand">The model is not open source but is currently offered as a free preview until 27 August, after which its pricing is undetermined. Ox Alpha has reportedly beaten strong frontier models on certain benchmarks, fuelling concerns that China could be closing the gap with — or overtaking — Western powers in the AI race. The opacity of the release has itself become the story: with no named maker, no disclosed training data and no accountability, the episode highlights how the open inference layer is becoming a venue for unattributed frontier capabilities.</div>
+  <div class="story__actions">
+    <a class="story__source-link" href="https://www.euronews.com/next/2026/08/25/mysterious-ultra-powerful-ai-system-emerges-as-china-continues-to-give-western-ai-a-run-fo" target="_blank" rel="noopener">Read more →</a>
+    <span class="story__sep">·</span>
+    <span>Euronews</span>
+    <span class="story__sep">·</span>
+    <button class="expand-btn" onclick="toggleExpand(this)">More <span class="arrow">▼</span></button>
+  </div>
+</article>
+
+<article class="story story-item" style="--i:6" data-tags="global">
+  <div class="story__top">
+    <span class="story__tag tag--global">Global</span>
+    <button class="bookmark" onclick="toggleBookmark(this)" title="Save story">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/><path class="bm-fill" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" fill="currentColor"/></svg>
+    </button>
+  </div>
+  <h2 class="story__headline"><a href="https://www.thomsonreuters.com/en/press-releases/2026/august/thomson-reuters-leverages-its-world-class-data-assets-to-launch-its-own-frontier-model" target="_blank" rel="noopener">Thomson Reuters launches "Thomson," its own proprietary LLM, for $40 million</a></h2>
+  <p class="story__summary">Thomson Reuters has launched its first in-house large language model, trained on decades of proprietary content from Westlaw, Practical Law, Checkpoint and Reuters — built at a fraction of the billions frontier labs spend, with a final training run costing roughly $450,000.</p>
+  <div class="story__expand">Starting from an open-source foundation (most recently Qwen 3.5), Thomson Reuters invested about $40 million over two years in talent and compute to build a model it fully owns and controls, positioning it as "Fiduciary-Grade." Its first deployment is in Tabular Analysis inside CoCounsel Legal, a high-volume structured document review task where a purpose-built model's advantage shows up immediately. A small open-weight version is available on Hugging Face under a non-commercial academic licence, and a developer portal with API access is in early development.</div>
+  <div class="story__actions">
+    <a class="story__source-link" href="https://www.thomsonreuters.com/en/press-releases/2026/august/thomson-reuters-leverages-its-world-class-data-assets-to-launch-its-own-frontier-model" target="_blank" rel="noopener">Read more →</a>
+    <span class="story__sep">·</span>
+    <span>Thomson Reuters</span>
+    <span class="story__sep">·</span>
+    <button class="expand-btn" onclick="toggleExpand(this)">More <span class="arrow">▼</span></button>
+  </div>
+</article>
+
+<!-- SECTION: RESEARCH & MODELS -->
+<div class="section-head" data-section="research">
+  <span class="section-head__pip section-head__pip--research"></span>
+  <span class="section-head__label">Research & Models</span>
+  <span class="section-head__line"></span>
+  <span class="section-head__count">3 stories</span>
+</div>
+
+<article class="story story-item" style="--i:7" data-tags="research">
+  <div class="story__top">
+    <span class="story__tag tag--research">Research</span>
+    <button class="bookmark" onclick="toggleBookmark(this)" title="Save story">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/><path class="bm-fill" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" fill="currentColor"/></svg>
+    </button>
+  </div>
+  <h2 class="story__headline"><a href="https://research.ibm.com/blog/introducing-granite-4-2" target="_blank" rel="noopener">IBM releases Granite 4.2 reasoning models with a switchable "thinking" mode</a></h2>
+  <p class="story__summary">IBM has released Granite 4.2, its first family of dense decoder-only reasoning language models in 3B, 8B and 30B parameter sizes, each with a switchable thinking mode for step-by-step planning, tool-calling and self-correction — all under the Apache 2.0 licence.</p>
+  <div class="story__expand">The two larger sizes were put through reinforcement learning inside real software-engineering, terminal and web-search environments, with native tool calling built into the template so the models plug into agentic harnesses served via vLLM or SGLang without adapters. IBM published the full training recipe, data-mixture proportions and per-stage hyperparameters alongside the weights, which are downloadable from Hugging Face, Ollama and GitHub. The 30B flagship is sized for a single multi-GPU node while the 3B targets lighter deployments. IBM also introduced Granite Speech 5.0 Turbo models at just 470 million parameters, aimed at laptops and edge devices.</div>
+  <div class="story__actions">
+    <a class="story__source-link" href="https://research.ibm.com/blog/introducing-granite-4-2" target="_blank" rel="noopener">Read more →</a>
+    <span class="story__sep">·</span>
+    <span>IBM Research</span>
+    <span class="story__sep">·</span>
+    <button class="expand-btn" onclick="toggleExpand(this)">More <span class="arrow">▼</span></button>
+  </div>
+</article>
+
+<article class="story story-item" style="--i:8" data-tags="research">
+  <div class="story__top">
+    <span class="story__tag tag--research">Research</span>
+    <button class="bookmark" onclick="toggleBookmark(this)" title="Save story">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/><path class="bm-fill" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" fill="currentColor"/></svg>
+    </button>
+  </div>
+  <h2 class="story__headline"><a href="https://www.marktechpost.com/2026/08/24/generalist-ai-releases-gen-1-5-a-robot-foundation-model-that-learns-new-tasks-from-one-3-12-second-demo/" target="_blank" rel="noopener">Generalist AI's GEN-1.5 learns new robot tasks from a single 3–12 second demo</a></h2>
+  <p class="story__summary">Generalist AI has released GEN-1.5, a robot foundation model that learns a new physical task from a single demonstration dropped into its 30-second context window — no fine-tuning, no task-specific programming — hitting 59% success across 10 tasks straight from pretraining.</p>
+  <div class="story__expand">The team calls the mechanism "physical prompting": a sensorimotor example is inserted into the context window and the robot performs the task immediately. Across 10 diverse manipulation tasks, one-shot in-context prompting averaged 59% success (±10%) from the pretrained model; ten gradient steps on five minutes of data per task raised that to 83% (±9%). Crucially, none of this was explicitly trained for — no architectural changes, no meta-learning loop, no auxiliary objectives — it emerged from over eight months of continuous pretraining on physical interaction data, mirroring how one-shot prompting emerged in GPT-3. This is a research release with no public weights, API or product.</div>
+  <div class="story__actions">
+    <a class="story__source-link" href="https://www.marktechpost.com/2026/08/24/generalist-ai-releases-gen-1-5-a-robot-foundation-model-that-learns-new-tasks-from-one-3-12-second-demo/" target="_blank" rel="noopener">Read more →</a>
+    <span class="story__sep">·</span>
+    <span>MarkTechPost</span>
+    <span class="story__sep">·</span>
+    <button class="expand-btn" onclick="toggleExpand(this)">More <span class="arrow">▼</span></button>
+  </div>
+</article>
+
+<article class="story story-item" style="--i:9" data-tags="research">
+  <div class="story__top">
+    <span class="story__tag tag--research">Research</span>
+    <button class="bookmark" onclick="toggleBookmark(this)" title="Save story">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/><path class="bm-fill" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" fill="currentColor"/></svg>
+    </button>
+  </div>
+  <h2 class="story__headline"><a href="https://www.labellerr.com/blog/kimi-k2-6-open-source-agentic-ai/" target="_blank" rel="noopener">Moonshot AI open-sources Kimi K2.6 for long-horizon agentic coding</a></h2>
+  <p class="story__summary">Moonshot AI has released Kimi K2.6 fully open source from day one — a native multimodal agentic model built to run long, run parallel and run without hand-holding, available with no waitlist across Kimi.com, the API and Kimi Code.</p>
+  <div class="story__expand">K2.6 advances practical capabilities in long-horizon coding, coding-driven design, proactive autonomous execution and swarm-based task orchestration. The model reportedly runs for 12+ hours, coordinates 300 agents, and beats closed models on real engineering benchmarks. For API access it offers OpenAI- and Anthropic-compatible endpoints, and for self-hosting it works with vLLM and SGLang. It is free to use, with paid plans for advanced workflows — a deliberate inversion of the usual closed-model, paid-API, waitlist release pattern, aimed at turning agentic coding from a demo into infrastructure.</div>
+  <div class="story__actions">
+    <a class="story__source-link" href="https://www.labellerr.com/blog/kimi-k2-6-open-source-agentic-ai/" target="_blank" rel="noopener">Read more →</a>
+    <span class="story__sep">·</span>
+    <span>Labellerr</span>
+    <span class="story__sep">·</span>
+    <button class="expand-btn" onclick="toggleExpand(this)">More <span class="arrow">▼</span></button>
+  </div>
+</article>
+
+<div class="no-results" id="noResults">No stories match your search. Try a different keyword.</div>
+
+</main>
+
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<div class="toast" id="toast"></div>
+
+<footer>
+  <div class="footer__top">
+    <span class="footer__logo">A</span>
+    <span class="footer__brand">AI News <span>Daily</span></span>
+  </div>
+  <div class="footer__info">
+    Generated on August 26, 2026 at 10:00 AM IST<br>
+    10 stories curated from 9 sources across India and global media
+  </div>
+  <p class="footer__disclaimer">Summaries are AI-generated from the cited sources and independently rewritten — not copied from the originals. Please refer to the original articles for full details and verification.</p>
+</footer>
+
+<script>
+  // --- Reading progress bar ---
+  const progressBar = document.getElementById('progressBar');
+  function updateProgress() {
+    const scrolled = window.scrollY;
+    const max = document.body.scrollHeight - window.innerHeight;
+    const pct = max > 0 ? (scrolled / max) * 100 : 0;
+    progressBar.style.width = Math.min(pct, 100) + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+
+  // --- Back to top button ---
+  const backToTop = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    backToTop.classList.toggle('show', window.scrollY > 400);
+  }, { passive: true });
+
+  // --- Section filter ---
+  let activeFilter = 'all';
+  function setFilter(filter) {
+    activeFilter = filter;
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.filter === filter);
+    });
+    applyFilters();
+  }
+
+  // --- Search ---
+  const searchInput = document.getElementById('searchInput');
+  searchInput.addEventListener('input', applyFilters);
+
+  function applyFilters() {
+    const query = searchInput.value.toLowerCase().trim();
+    let visibleCount = 0;
+
+    document.querySelectorAll('.story-item').forEach(story => {
+      const tags = story.dataset.tags || '';
+      const text = story.textContent.toLowerCase();
+      const matchesFilter = activeFilter === 'all' || tags.includes(activeFilter);
+      const matchesSearch = !query || text.includes(query);
+      const visible = matchesFilter && matchesSearch;
+      story.style.display = visible ? '' : 'none';
+      if (visible) visibleCount++;
+      highlightSearch(story, query);
+    });
+
+    document.querySelectorAll('.section-head').forEach(head => {
+      const section = head.dataset.section;
+      const hasVisible = activeFilter === 'all' || section === activeFilter;
+      const anyStoriesVisible = Array.from(document.querySelectorAll(`.story-item[data-tags*="${section}"]`))
+        .some(s => s.style.display !== 'none');
+      head.style.display = (hasVisible && anyStoriesVisible) ? '' : 'none';
+    });
+
+    const pullquote = document.querySelector('.pullquote');
+    if (pullquote) {
+      pullquote.style.display = (activeFilter === 'all' || activeFilter === 'india') && !query ? '' : 'none';
+    }
+
+    document.getElementById('noResults').classList.toggle('show', visibleCount === 0);
+  }
+
+  // --- Highlight search terms ---
+  function highlightSearch(story, query) {
+    story.querySelectorAll('mark').forEach(m => {
+      const parent = m.parentNode;
+      parent.replaceChild(document.createTextNode(m.textContent), m);
+      parent.normalize();
+    });
+    if (!query) return;
+    const walker = document.createTreeWalker(story, NodeFilter.SHOW_TEXT, {
+      acceptNode: (node) => {
+        if (node.parentNode.tagName === 'SCRIPT' || node.parentNode.tagName === 'STYLE') return NodeFilter.FILTER_REJECT;
+        return node.textContent.toLowerCase().includes(query) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+      }
+    });
+    const nodes = [];
+    let node;
+    while (node = walker.nextNode()) nodes.push(node);
+    nodes.forEach(textNode => {
+      const text = textNode.textContent;
+      const lower = text.toLowerCase();
+      const idx = lower.indexOf(query);
+      if (idx === -1) return;
+      const before = document.createTextNode(text.slice(0, idx));
+      const mark = document.createElement('mark');
+      mark.textContent = text.slice(idx, idx + query.length);
+      const after = document.createTextNode(text.slice(idx + query.length));
+      const parent = textNode.parentNode;
+      parent.replaceChild(before, textNode);
+      parent.insertBefore(mark, before.nextSibling);
+      parent.insertBefore(after, mark.nextSibling);
+    });
+  }
+
+  // --- Expand/collapse story ---
+  function toggleExpand(btn) {
+    const story = btn.closest('article');
+    story.classList.toggle('expanded');
+    const label = story.classList.contains('expanded') ? 'Less' : 'More';
+    btn.childNodes[0].textContent = label + ' ';
+  }
+
+  // --- Bookmarks ---
+  let bookmarks = new Set();
+  function toggleBookmark(btn) {
+    const story = btn.closest('article');
+    const headline = story.querySelector('.story__headline').textContent.trim();
+    btn.classList.toggle('bookmarked');
+    if (btn.classList.contains('bookmarked')) {
+      bookmarks.add(headline);
+      showToast('★ Story saved');
+    } else {
+      bookmarks.delete(headline);
+      showToast('Story removed');
+    }
+    updateBookmarkCount();
+  }
+
+  function updateBookmarkCount() {
+    const count = bookmarks.size;
+    const el = document.getElementById('bmCount');
+    el.textContent = count > 0 ? count : '';
+  }
+
+  let bookmarksViewActive = false;
+  function toggleBookmarksView() {
+    bookmarksViewActive = !bookmarksViewActive;
+    if (bookmarksViewActive) {
+      document.querySelectorAll('.story-item').forEach(story => {
+        const btn = story.querySelector('.bookmark');
+        const isBookmarked = btn && btn.classList.contains('bookmarked');
+        story.style.display = isBookmarked ? '' : 'none';
+      });
+      document.querySelectorAll('.section-head').forEach(h => h.style.display = 'none');
+      showToast('Showing ' + bookmarks.size + ' saved stories');
+    } else {
+      setFilter('all');
+      searchInput.value = '';
+      showToast('Showing all stories');
+    }
+  }
+
+  // --- Toast notification ---
+  let toastTimer;
+  function showToast(msg) {
+    const toast = document.getElementById('toast');
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('show'), 2000);
+  }
+
+  // --- Keyboard shortcuts ---
+  document.addEventListener('keydown', (e) => {
+    if (e.key === '/' && document.activeElement !== searchInput) {
+      e.preventDefault();
+      searchInput.focus();
+    }
+    if (e.key === 'Escape' && document.activeElement === searchInput) {
+      searchInput.value = '';
+      applyFilters();
+      searchInput.blur();
+    }
+  });
+
+  updateProgress();
+</script>
+
+</body>
+</html>
