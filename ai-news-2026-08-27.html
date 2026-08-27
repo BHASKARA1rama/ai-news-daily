@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>AI News Daily — August 27, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --font-serif: 'Lora', Georgia, 'Times New Roman', serif;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+
+    color-scheme: light;
+    --bg: #f0eee6;
+    --bg-alt: #faf9f5;
+    --surface: #ffffff;
+    --surface-hover: #f7f6f1;
+    --border: #e3e0d7;
+    --border-subtle: #ebe9e1;
+    --text: #2d2b27;
+    --text-secondary: #59554e;
+    --text-tertiary: #8a8579;
+    --accent: #c2714c;
+    --accent-hover: #a85f3e;
+    --accent-light: #f3e8e0;
+    --accent-bg: #faf3ee;
+
+    --india: #c44d3a;
+    --india-bg: rgba(196,77,58,0.08);
+    --global: #4a7ba8;
+    --global-bg: rgba(74,123,168,0.08);
+    --research: #4a8a6a;
+    --research-bg: rgba(74,138,106,0.08);
+    --policy: #a87c2e;
+    --policy-bg: rgba(168,124,46,0.08);
+
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.06);
+    --shadow-lg: 0 8px 30px rgba(0,0,0,0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    overflow-wrap: break-word;
+  }
+
+  a { color: var(--accent); text-decoration: none; transition: color 0.15s ease; }
+  a:hover { color: var(--accent-hover); }
+
+  .progress-bar {
+    position: fixed;
+    top: 0; left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+    z-index: 200;
+    transition: width 0.1s ease-out;
+    border-radius: 0 2px 2px 0;
+  }
+
+  .topbar {
+    background: var(--bg-alt);
+    border-bottom: 1px solid var(--border);
+    padding: 0.85rem 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  .topbar-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--text);
+    cursor: pointer;
+    transition: opacity 0.15s ease;
+  }
+  .logo:hover { opacity: 0.8; }
+  .logo__icon {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-size: 0.85rem; font-weight: 700;
+    font-family: var(--font-sans);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .logo:hover .logo__icon { transform: rotate(360deg); }
+  .logo span { color: var(--accent); }
+  .topbar__right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .topbar__date {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-tertiary);
+  }
+  .bookmarks-btn {
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.35rem 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-tertiary);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  .bookmarks-btn:hover {
+    background: var(--surface);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .bookmarks-btn .bm-count {
+    background: var(--accent);
+    color: white;
+    border-radius: 10px;
+    padding: 0.1rem 0.4rem;
+    font-size: 0.62rem;
+    font-weight: 600;
+    min-width: 18px;
+    text-align: center;
+  }
+  .bookmarks-btn:has(.bm-count:empty) .bm-count { display: none; }
+
+  .hero {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 1.5rem;
+  }
+  .hero__label {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.8rem;
+  }
+  .hero__title {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin-bottom: 1rem;
+  }
+  .hero__subtitle {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    max-width: 580px;
+    margin-bottom: 1.5rem;
+  }
+
+  .stats {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+  .stat__value {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--text);
+  }
+  .stat__label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+  }
+
+  .toolbar {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.5rem 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .search-wrap {
+    position: relative;
+  }
+  .search-wrap svg {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px; height: 16px;
+    color: var(--text-tertiary);
+    pointer-events: none;
+  }
+  .search {
+    width: 100%;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    padding: 0.7rem 1rem 0.7rem 2.6rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--surface);
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+  .search:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-light);
+  }
+  .search::placeholder { color: var(--text-tertiary); }
+
+  .filters {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .filter-btn {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    padding: 0.35rem 0.85rem;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: var(--surface);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .filter-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .filter-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: white;
+  }
+  .filter-btn .filter-pip {
+    width: 6px; height: 6px; border-radius: 50%;
+  }
+  .filter-btn[data-filter="india"] .filter-pip { background: var(--india); }
+  .filter-btn[data-filter="global"] .filter-pip { background: var(--global); }
+  .filter-btn[data-filter="research"] .filter-pip { background: var(--research); }
+  .filter-btn[data-filter="policy"] .filter-pip { background: var(--policy); }
+  .filter-btn.active .filter-pip { background: white; opacity: 0.8; }
+
+  .editors-note {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.5rem 1.5rem 1rem;
+  }
+  .editors-note__box {
+    background: var(--accent-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.3rem 1.5rem;
+  }
+  .editors-note__label {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+  .editors-note__text {
+    font-family: var(--font-serif);
+    font-size: 1.02rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    font-style: italic;
+  }
+
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0.5rem 1.5rem 3rem;
+  }
+
+  .section-head {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin: 2.2rem 0 1rem;
+  }
+  .section-head__pip {
+    width: 7px; height: 7px; border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .section-head__pip--india { background: var(--india); }
+  .section-head__pip--global { background: var(--global); }
+  .section-head__pip--research { background: var(--research); }
+  .section-head__label {
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+  .section-head__line {
+    flex: 1; height: 1px; background: var(--border-subtle);
+  }
+  .section-head__count {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--text-tertiary);
+  }
+
+  .featured {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.6rem 1.8rem;
+    margin-bottom: 1rem;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    animation: fadeUp 0.5s ease-out both;
+    position: relative;
+  }
+  .featured:hover {
+    box-shadow: var(--shadow-md);
+  }
+  .featured__label {
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.6rem;
+  }
+  .featured .story__headline { font-size: 1.5rem; }
+
+  article.story {
+    background: var(--surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 1.4rem 1.5rem;
+    margin-bottom: 0.75rem;
+    animation: fadeUp 0.5s ease-out both;
+    animation-delay: calc(var(--i, 0) * 0.06s);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+  }
+  article.story:hover {
+    border-color: var(--border);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .story__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .story__tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    font-weight: 500;
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+  }
+  .tag--india { background: var(--india-bg); color: var(--india); }
+  .tag--global { background: var(--global-bg); color: var(--global); }
+  .tag--research { background: var(--research-bg); color: var(--research); }
+  .tag--policy { background: var(--policy-bg); color: var(--policy); }
+
+  .bookmark {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.2rem;
+    color: var(--text-tertiary);
+    transition: color 0.15s ease, transform 0.15s ease;
+    flex-shrink: 0;
+  }
+  .bookmark:hover { color: var(--accent); transform: scale(1.15); }
+  .bookmark.bookmarked { color: var(--accent); }
+  .bookmark svg { width: 18px; height: 18px; }
+  .bookmark .bm-fill { transition: opacity 0.15s ease; opacity: 0; }
+  .bookmark.bookmarked .bm-fill { opacity: 1; }
+
+  .story__headline {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.5rem;
+  }
+  .story__headline a { color: var(--text); }
+  .story__headline a:hover { color: var(--accent); }
+
+  .story__summary {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+    max-width: 68ch;
+  }
+
+  .story__expand {
+    display: none;
+    font-size: 0.93rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+    max-width: 68ch;
+    animation: expandIn 0.3s ease-out;
+  }
+  article.story.expanded .story__expand { display: block; }
+  article.story.expanded .story__summary {
+    margin-bottom: 0.4rem;
+  }
+
+  .story__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-tertiary);
+  }
+  .story__source-link {
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .story__source-link:hover { text-decoration: underline; }
+  .story__sep { opacity: 0.4; }
+  .expand-btn {
+    background: none;
+    border: none;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-tertiary);
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.15s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+  }
+  .expand-btn:hover { color: var(--accent); }
+  .expand-btn .arrow {
+    transition: transform 0.2s ease;
+    font-size: 0.6rem;
+  }
+  article.story.expanded .expand-btn .arrow {
+    transform: rotate(180deg);
+  }
+
+  .pullquote {
+    margin: 1.8rem 0;
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    border-left: 2px solid var(--accent);
+    animation: fadeUp 0.5s ease-out both;
+    animation-delay: 0.3s;
+  }
+  .pullquote p {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--text);
+  }
+  .pullquote cite {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    font-style: normal;
+    color: var(--text-tertiary);
+    margin-top: 0.5rem;
+  }
+
+  .no-results {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--text-tertiary);
+    font-family: var(--font-serif);
+    font-style: italic;
+    display: none;
+  }
+  .no-results.show { display: block; }
+
+  .back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    z-index: 90;
+  }
+  .back-to-top.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .back-to-top:hover {
+    transform: translateY(-3px);
+    background: var(--accent-hover);
+  }
+  .back-to-top svg { width: 20px; height: 20px; }
+
+  footer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+    border-top: 1px solid var(--border);
+  }
+  .footer__top {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.7rem;
+  }
+  .footer__logo {
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: inline-flex;
+    align-items: center; justify-content: center;
+    color: white; font-size: 0.7rem; font-weight: 700;
+  }
+  .footer__brand {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  .footer__brand span { color: var(--accent); }
+  .footer__info {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-tertiary);
+    line-height: 1.8;
+  }
+  .footer__disclaimer {
+    font-size: 0.83rem;
+    color: var(--text-tertiary);
+    margin-top: 0.7rem;
+    max-width: 60ch;
+    line-height: 1.55;
+  }
+
+  .toast {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: var(--text);
+    color: var(--bg-alt);
+    padding: 0.7rem 1.3rem;
+    border-radius: 10px;
+    font-size: 0.82rem;
+    font-family: var(--font-sans);
+    box-shadow: var(--shadow-lg);
+    z-index: 150;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    pointer-events: none;
+    white-space: nowrap;
+  }
+  .toast.show {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  mark {
+    background: var(--accent-light);
+    color: var(--accent-hover);
+    border-radius: 2px;
+    padding: 0 2px;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes expandIn {
+    from { opacity: 0; max-height: 0; }
+    to { opacity: 1; max-height: 500px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .hero { padding: 2rem 1.25rem 1rem; }
+    .hero__title { font-size: 1.6rem; }
+    .hero__subtitle { font-size: 1.05rem; }
+    .stats { gap: 1rem; flex-wrap: wrap; }
+    .toolbar, .editors-note, main, footer { padding-left: 1.25rem; padding-right: 1.25rem; }
+    .featured { padding: 1.2rem 1.3rem; }
+    .featured .story__headline { font-size: 1.2rem; }
+    article.story { padding: 1.1rem 1.2rem; }
+    .story__headline { font-size: 1.1rem; }
+    .pullquote p { font-size: 1.1rem; }
+    .back-to-top { bottom: 1rem; right: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<nav class="topbar">
+  <div class="topbar-inner">
+    <div class="logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+      <span class="logo__icon">A</span>
+      AI News <span>Daily</span>
+    </div>
+    <div class="topbar__right">
+      <div class="topbar__date">Aug 27, 2026</div>
+      <button class="bookmarks-btn" id="bookmarksBtn" onclick="toggleBookmarksView()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg>
+        Saved <span class="bm-count" id="bmCount">0</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero__label">The Daily Brief</div>
+  <h1 class="hero__title">Gates Sounds the Alarm as India Goes All-In on AI Infrastructure</h1>
+  <p class="hero__subtitle">A day of warnings and megabuilds &mdash; from a 9,000-chip Nvidia order in Hyderabad to a 10-trillion-parameter OpenAI model and a frank Gates essay on the thresholds we've already crossed.</p>
+  <div class="stats">
+    <div class="stat"><div class="stat__value">9</div><div class="stat__label">Stories</div></div>
+    <div class="stat"><div class="stat__value">9</div><div class="stat__label">Sources</div></div>
+    <div class="stat"><div class="stat__value">3</div><div class="stat__label">Sections</div></div>
+    <div class="stat"><div class="stat__value">7 min</div><div class="stat__label">Read time</div></div>
+  </div>
+</header>
+
+<div class="toolbar">
+  <div class="search-wrap">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+    <input type="text" class="search" id="searchInput" placeholder="Search stories by keyword..." />
+  </div>
+  <div class="filters">
+    <button class="filter-btn active" data-filter="all" onclick="setFilter('all')">All</button>
+    <button class="filter-btn" data-filter="india" onclick="setFilter('india')"><span class="filter-pip"></span>India</button>
+    <button class="filter-btn" data-filter="global" onclick="setFilter('global')"><span class="filter-pip"></span>Global</button>
+    <button class="filter-btn" data-filter="research" onclick="setFilter('research')"><span class="filter-pip"></span>Research</button>
+    <button class="filter-btn" data-filter="policy" onclick="setFilter('policy')"><span class="filter-pip"></span>Policy</button>
+  </div>
+</div>
+
+<div class="editors-note">
+  <div class="editors-note__box">
+    <div class="editors-note__label">Editor's Note</div>
+    <p class="editors-note__text">Today's edition captures a striking split-screen moment in AI. India is pouring capital and policy weight into the stack &mdash; a 9,000-unit Nvidia Vera Rubin order, state-run GPU clusters, and a reopened government tender to put AI inside Cabinet workflows &mdash; even as Bill Gates publishes an essay warning that guardrails have fallen dangerously behind. Meanwhile the frontier keeps climbing, with IBM, Thomson Reuters, and a reported 10-trillion-parameter OpenAI model all landing within 48 hours.</p>
+  </div>
+</div>
+
+<main id="stories">
+
+<!-- SECTION: INDIA -->
+<div class="section-head" data-section="india">
+  <span class="section-head__pip section-head__pip--india"></span>
+  <span class="section-head__label">India</span>
+  <span class="section-head__line"></span>
+  <span class="section-head__count">5 stories</span>
+</div>
+
+<article class="story story-item" style="--i:0" data-tags="india">
+  <div class="story__top">
+    <span class="story__tag tag--india">India</span>
+    <button class="bookmark" onclick="toggleBookmark(this)" title="Save story">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/><path class="bm-fill" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" fill="currentColor"/></svg>
+    </button>
+  </div>
+  <h2 class="story__headline"><a href="https://finance.yahoo.com/technology/ai/articles/india-ai-data-center-firm-orders-9000-nvidia-vera-rubin-systems-094222289.html" target="_blank" rel="noopener">Indian AI firm AM Intelligence orders 9,000 Nvidia Vera Rubin systems</a></h2>
+  <p class="story__summary">Hyderabad-based AM Intelligence has placed a binding order for 9,000 Nvidia Vera Rubin rack-scale systems, positioning itself among the first adopters in Asia of the next-generation compute platform, with capacity slated to come online in southern India next year.</p>
+  <div class="story__expand">The order falls under the company's broader $8-billion plan to build 1 gigawatt of computing capacity, with the Hyderabad facility targeting trillion-parameter AI models and next-generation agentic AI applications. AM Intelligence is part of the group that owns renewable-energy producer Greenko, and founder Mahesh Kolli said its access to low-cost renewable power makes it "one of the lowest-cost AI computation infrastructure players globally." Initial capacity has already been purchased by a US customer, and the group will serve buyers in India, the US, Finland and Malaysia, aiming to reach 5 GW of data-center capacity by 2030.</div>
+  <div class="story__actions">
+    <a class="story__source-link" href="https://finance.yahoo.com/technology/ai/articles/india-ai-data-center-firm-orders-9000-nvidia-vera-rubin-systems-094222289.html" target="_blank" rel="noopener">Read more &rarr;</a>
+    <span class="story__sep">&middot;</span>
+    <span>Bloomberg / Yahoo Finance</span>
+    <span class="story__sep">&middot;</span>
+    <button class="expand-btn" onclick="toggleExpand(this)">More <span class="arrow">&#9660;</span></button>
+  </div>
+</article>
+
+<article class="story story-item" style="--i:1" data-tags="india policy">
+  <div class="story__top">
+    <span class="story__tag tag--india">India</span>
+    <button class="bookmark" onclick="toggleBookmark(this)" title="Save story">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/><path class="bm-fill" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" fill="currentColor"/></svg>
+    </button>
+  </div>
+  <h2 class="story__headline"><a href="https://theprint.in/tech/exclusive-govt-reopens-tender-for-ai-tools-to-summarise-cabinet-notes-run-facial-attendance/3024422/" target="_blank" rel="noopener">Centre reopens tender for AI tools to summarise Cabinet notes and run facial attendance</a></h2>
+  <p class="story__summary">The National e-Governance Division under MeitY has reopened a Request for Empanelment seeking AI tools that can summarise Cabinet notes, verify identity through facial checks, and power software agents inside DigiLocker &mdash; while requiring government data to stay within India.</p>
+  <div class="story__expand">The RFE, reopened on 13 August, lists foreign commercial AI services &mdash; including OpenAI, Anthropic and Google &mdash; among the models the empanelled systems may connect to, even as it mandates that government data remain within India. The move follows the first round of empanelment in which six companies &mdash; TCS, NEC India, Kyndryl, CoRover, Innefu Labs and Cactus Technology Solutions &mdash; were selected. The Times of India separately reported that the fresh tender seeks to widen the vendor base rather than re-discover prices, with new entrants accepting the rate card from the earlier round.</div>
+  <div class="story__actions">
+    <a class="story__source-link" href="https://theprint.in/tech/exclusive-govt-reopens-tender-for-ai-tools-to-summarise-cabinet-notes-run-facial-attendance/3024422/" target="_blank" rel="noopener">Read more &rarr;</a>
+    <span class="story__sep">&middot;</span>
+    <span>ThePrint</span>
+    <span class="story__sep">&middot;</span>
+    <button class="expand-btn" onclick="toggleExpand(this)">More <span class="arrow">&#9660;</span></button>
+  </div>
+</article>
+
+<article class="story story-item" style="--i:2" data-tags="india policy">
+  <div class="story__top">
+    <span class="story__tag tag--india">India</span>
+    <button class="bookmark" onclick="toggleBookmark(this)" title="Save story">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/><path class="bm-fill" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" fill="currentColor"/></svg>
+    </button>
+  </div>
+  <h2 class="story__headline"><a href="https://www.newindianexpress.com/states/tamil-nadu/2026/Aug/26/tn-plans-ai-centres-computing-cluster-and-a-super-app" target="_blank" rel="noopener">Tamil Nadu plans two AI centres of excellence, a state GPU cluster and a Super App</a></h2>
+  <p class="story__summary">Tamil Nadu unveiled a slate of AI initiatives in the Assembly, including two AI Centres of Excellence, a state-owned high-performance GPU computing cluster, and a "Vetri Tamil Nadu Super App" bringing 500 government services to mobile phones.</p>
+  <div class="story__expand">The Vetri Tamil Nadu AI Centres of Excellence (VTN AI CoE) will be set up through ELCOT, with the first two centres in Chennai and Coimbatore under a public-private partnership at a cost of Rs 20 crore. A separate state-owned GPU computing cluster will be built for Rs 10 crore, with free access for startups and MSMEs to lower one of the biggest entry barriers for smaller firms. The state also announced TN DRIVE, a Rs 3 crore open prototype manufacturing hub for deep-tech startups, an AI-enabled Tamil Internet Language Lab, AI tools for e-office, health and agriculture, and an AI Advisory Council of academics and industry leaders.</div>
+  <div class="story__actions">
+    <a class="story__source-link" href="https://www.newindianexpress.com/states/tamil-nadu/2026/Aug/26/tn-plans-ai-centres-computing-cluster-and-a-super-app" target="_blank" rel="noopener">Read more &rarr;</a>
+    <span class="story__sep">&middot;</span>
+    <span>The New Indian Express</span>
+    <span class="story__sep">&middot;</span>
+    <button class="expand-btn" onclick="toggleExpand(this)">More <span class="arrow">&#9660;</span></button>
+  </div>
+</article>
+
+<article class="story story-item" style="--i:3" data-tags="india">
+  <div class="story__top">
+    <span class="story__tag tag--india">India</span>
+    <button class="bookmark" onclick="toggleBookmark(this)" title="Save story">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/><path class="bm-fill" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" fill="currentColor"/></svg>
+    </button>
+  </div>
+  <h2 class="story__headline"><a href="https://www.newindianexpress.com/cities/bhubaneswar/2026/Aug/26/odisha-fire-department-launch-ai-chatbot-agni-saathi-to-provide-fire-safety-guidance-to-people" target="_blank" rel="noopener">Odisha launches 'Agni Saathi', India's first AI chatbot for fire services</a></h2>
+  <p class="story__summary">The Odisha Fire and Emergency Service launched 'Agni Saathi', a bilingual AI chatbot that offers citizens round-the-clock access to fire safety protocols, compliance procedures and emergency guidance directly from any mobile phone.</p>
+  <div class="story__expand">The platform supports Odia and English and guides users through obtaining Fire Safety Recommendations (Form II), post-construction fire safety certificates, and Form VI renewals. It also explains how to request fire tenders for public events, appoint certified fire safety supervisors under Rule 15, and covers the 2025 Fire Safety Rules. Beyond compliance, it delivers actionable protocols for domestic emergencies such as LPG gas leaks, kitchen grease fires and electrical short circuits. Fire Service DG Sudhanshu Sarangi called it "leveraging AI to bring fire service governance directly into the hands of every citizen," while noting active emergencies must still be reported to 112.</div>
+  <div class="story__actions">
+    <a class="story__source-link" href="https://www.newindianexpress.com/cities/bhubaneswar/2026/Aug/26/odisha-fire-department-launch-ai-chatbot-agni-saathi-to-provide-fire-safety-guidance-to-people" target="_blank" rel="noopener">Read more &rarr;</a>
+    <span class="story__sep">&middot;</span>
+    <span>The New Indian Express</span>
+    <span class="story__sep">&middot;</span>
+    <button class="expand-btn" onclick="toggleExpand(this)">More <span class="arrow">&#9660;</span></button>
+  </div>
+</article>
+
+<article class="story story-item" style="--i:4" data-tags="india research">
+  <div class="story__top">
+    <span class="story__tag tag--india">India</span>
+    <button class="bookmark" onclick="toggleBookmark(this)" title="Save story">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/><path class="bm-fill" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" fill="currentColor"/></svg>
+    </button>
+  </div>
+  <h2 class="story__headline"><a href="https://economictimes.indiatimes.com/ai/ai-insights/vahan-ai-fine-tunes-30-billion-parameter-nvidia-nemotron-model-for-blue-collar-hiring/articleshow/133462698.cms" target="_blank" rel="noopener">Vahan AI fine-tunes 30-billion-parameter Nvidia Nemotron model for blue-collar hiring</a></h2>
+  <p class="story__summary">Indian recruitment startup Vahan AI has fine-tuned Nvidia's 30-billion-parameter Nemotron model to automate blue-collar hiring, using a specialised large language model to screen and match candidates at scale.</p>
+  <div class="story__expand">The company says the fine-tuned model handles conversational screening in multiple Indian languages, letting it interview and assess candidates for roles such as delivery and warehouse work without human recruiters in the loop. The approach reflects a growing pattern of Indian startups building vertical-specific models on top of open or partner-provided foundation models rather than training their own from scratch, leveraging Nvidia's Nemotron family tuned for reasoning and instruction-following.</div>
+  <div class="story__actions">
+    <a class="story__source-link" href="https://economictimes.indiatimes.com/ai/ai-insights/vahan-ai-fine-tunes-30-billion-parameter-nvidia-nemotron-model-for-blue-collar-hiring/articleshow/133462698.cms" target="_blank" rel="noopener">Read more &rarr;</a>
+    <span class="story__sep">&middot;</span>
+    <span>The Economic Times</span>
+    <span class="story__sep">&middot;</span>
+    <button class="expand-btn" onclick="toggleExpand(this)">More <span class="arrow">&#9660;</span></button>
+  </div>
+</article>
+
+<!-- SECTION: GLOBAL -->
+<div class="section-head" data-section="global">
+  <span class="section-head__pip section-head__pip--global"></span>
+  <span class="section-head__label">Global</span>
+  <span class="section-head__line"></span>
+  <span class="section-head__count">2 stories</span>
+</div>
+
+<article class="featured story-item" style="--i:0" data-tags="global policy">
+  <div class="featured__label">&#9733; Top Story</div>
+  <div class="story__top">
+    <span class="story__tag tag--global">Global</span>
+    <button class="bookmark" onclick="toggleBookmark(this)" title="Save story">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/><path class="bm-fill" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" fill="currentColor"/></svg>
+    </button>
+  </div>
+  <h2 class="story__headline"><a href="https://www.technologyreview.com/2026/08/26/1142946/bill-gates-ai-danger-threshold/" target="_blank" rel="noopener">Bill Gates says we've passed AI's danger thresholds &mdash; and the world isn't paying attention</a></h2>
+  <p class="story__summary">In a new essay published today, the philanthropist and former Microsoft CEO argues that AI has already crossed the points where multiple dangers should have been checked &mdash; in bio-capabilities, cyber, psychosocial impact, job-market disruption, and control &mdash; while guardrails lag far behind.</p>
+  <div class="story__expand">Gates told MIT Technology Review he has grown "increasingly alarmed by the rate of change," singling out the bio-capabilities of frontier models as especially chilling: "I view bioterrorism risk, versus a natural pandemic, as about 50 times more scary, more likely than a natural pandemic risk." He said any model that can make novel molecules should be monitored, and expressed stunned disbelief "at the lack of concern and discussion outside of the industry." Beyond warnings, the essay also advances ideas for moving society forward, positioning Gates as both a cheerleader for AI's potential and a unusually prominent voice now demanding faster, more serious regulation.</div>
+  <div class="story__actions">
+    <a class="story__source-link" href="https://www.technologyreview.com/2026/08/26/1142946/bill-gates-ai-danger-threshold/" target="_blank" rel="noopener">Read full story &rarr;</a>
+    <span class="story__sep">&middot;</span>
+    <span>MIT Technology Review</span>
+    <span class="story__sep">&middot;</span>
+    <button class="expand-btn" onclick="toggleExpand(this)">More <span class="arrow">&#9660;</span></button>
+  </div>
+</article>
+
+<div class="pullquote">
+  <p>"We've crossed the threshold in terms of AI's bio-capabilities, cyber-capabilities, psychosocial capabilities, job-market-destruction capabilities, and even the lack of control. I'm just stunned at the lack of concern and discussion outside of the industry."</p>
+  <cite>&mdash; Bill Gates, in an interview with MIT Technology Review</cite>
+</div>
+
+<article class="story story-item" style="--i:1" data-tags="global research">
+  <div class="story__top">
+    <span class="story__tag tag--global">Global</span>
+    <button class="bookmark" onclick="toggleBookmark(this)" title="Save story">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/><path class="bm-fill" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" fill="currentColor"/></svg>
+    </button>
+  </div>
+  <h2 class="story__headline"><a href="https://www.prnewswire.com/news-releases/thomson-reuters-leverages-its-world-class-data-assets-to-launch-its-own-frontier-model-302857499.html" target="_blank" rel="noopener">Thomson Reuters launches 'Thomson', its first proprietary LLM, for $40 million</a></h2>
+  <p class="story__summary">Thomson Reuters unveiled 'Thomson', a proprietary large language model built in-house for a fraction of frontier-lab costs, trained on decades of content from Westlaw, Practical Law, Checkpoint and Reuters, and debuting inside CoCounsel Legal.</p>
+  <div class="story__expand">The company invested roughly $40 million over two years &mdash; versus the billions spent on models like ChatGPT and Claude &mdash; with a final training run costing about $450,000. Thomson was built on a strong open-source foundation and then specialised through mid-training and post-training on proprietary legal, tax and news content, with hundreds of subject-matter experts integrated from training-objective design through final evaluations. CEO Steve Hasker said early evaluations put Thomson "on par with the latest frontier models across a range of tasks." A small open-weight version is being released on Hugging Face under a non-commercial licence for academic validation.</div>
+  <div class="story__actions">
+    <a class="story__source-link" href="https://www.prnewswire.com/news-releases/thomson-reuters-leverages-its-world-class-data-assets-to-launch-its-own-frontier-model-302857499.html" target="_blank" rel="noopener">Read more &rarr;</a>
+    <span class="story__sep">&middot;</span>
+    <span>Thomson Reuters / PR Newswire</span>
+    <span class="story__sep">&middot;</span>
+    <button class="expand-btn" onclick="toggleExpand(this)">More <span class="arrow">&#9660;</span></button>
+  </div>
+</article>
+
+<!-- SECTION: RESEARCH & MODELS -->
+<div class="section-head" data-section="research">
+  <span class="section-head__pip section-head__pip--research"></span>
+  <span class="section-head__label">Research & Models</span>
+  <span class="section-head__line"></span>
+  <span class="section-head__count">2 stories</span>
+</div>
+
+<article class="story story-item" style="--i:0" data-tags="research">
+  <div class="story__top">
+    <span class="story__tag tag--research">Research</span>
+    <button class="bookmark" onclick="toggleBookmark(this)" title="Save story">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/><path class="bm-fill" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" fill="currentColor"/></svg>
+    </button>
+  </div>
+  <h2 class="story__headline"><a href="https://www.unite.ai/ibms-granite-4-2-models-learn-to-think-and-act-inside-environments/" target="_blank" rel="noopener">IBM releases Granite 4.2 reasoning models that think and act inside real environments</a></h2>
+  <p class="story__summary">IBM shipped Granite 4.2, its first family of dense reasoning language models in 3B, 8B and 30B sizes, released under Apache 2.0 with a switchable thinking mode and agentic reinforcement learning that runs the two larger models inside live software, terminal and web-search environments.</p>
+  <div class="story__expand">The models were pre-trained from scratch on roughly 15 trillion tokens, with a five-phase schedule extending the context window to 512K tokens, followed by supervised fine-tuning on 7.2 million samples. The 8B and 30B variants then pass through an agentic RL block: a software-engineering stage using the OpenHands harness where the model edits real repositories and passes only if hidden tests pass, a terminal stage with up to 64 environment turns per rollout, and a search stage answering multi-hop questions through live web calls. IBM reports SWE-Bench Verified scores of 57.00 for the 30B and 47.67 for the 8B. All weights, quantized variants and the full training recipe are publicly available.</div>
+  <div class="story__actions">
+    <a class="story__source-link" href="https://www.unite.ai/ibms-granite-4-2-models-learn-to-think-and-act-inside-environments/" target="_blank" rel="noopener">Read more &rarr;</a>
+    <span class="story__sep">&middot;</span>
+    <span>Unite.AI</span>
+    <span class="story__sep">&middot;</span>
+    <button class="expand-btn" onclick="toggleExpand(this)">More <span class="arrow">&#9660;</span></button>
+  </div>
+</article>
+
+<article class="story story-item" style="--i:1" data-tags="research">
+  <div class="story__top">
+    <span class="story__tag tag--research">Research</span>
+    <button class="bookmark" onclick="toggleBookmark(this)" title="Save story">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/><path class="bm-fill" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" fill="currentColor"/></svg>
+    </button>
+  </div>
+  <h2 class="story__headline"><a href="https://www.panews.io/articles/01a03b75-b602-772a-93b3-34f03ed61c16" target="_blank" rel="noopener">Report: OpenAI completes pretraining of 'Bel' &mdash; a 10-trillion-parameter model targeting AGI</a></h2>
+  <p class="story__summary">A source posting on X claims OpenAI has completed pre-training of its next-generation model, internally codenamed 'Bel', with a total parameter count exceeding 10 trillion and ambitions to serve as the foundation model after GPT-6 and to challenge the threshold for artificial general intelligence.</p>
+  <div class="story__expand">Reported by PANews via IT Home, the leak says Bel is the direct successor to the 'Doug' model and that OpenAI hopes to make it the foundation model after GPT-6, "and even challenge the threshold model for artificial general intelligence (AGI)." The claim is unverified and comes from a single anonymous source, so should be treated cautiously. If accurate, a 10-trillion-parameter model would represent an order-of-magnitude scale jump, and the explicit framing around AGI thresholds aligns with OpenAI's long-stated mission. No official confirmation or timeline for release has been provided by OpenAI.</div>
+  <div class="story__actions">
+    <a class="story__source-link" href="https://www.panews.io/articles/01a03b75-b602-772a-93b3-34f03ed61c16" target="_blank" rel="noopener">Read more &rarr;</a>
+    <span class="story__sep">&middot;</span>
+    <span>PANews</span>
+    <span class="story__sep">&middot;</span>
+    <button class="expand-btn" onclick="toggleExpand(this)">More <span class="arrow">&#9660;</span></button>
+  </div>
+</article>
+
+<div class="no-results" id="noResults">No stories match your search. Try a different keyword.</div>
+
+</main>
+
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<div class="toast" id="toast"></div>
+
+<footer>
+  <div class="footer__top">
+    <span class="footer__logo">A</span>
+    <span class="footer__brand">AI News <span>Daily</span></span>
+  </div>
+  <div class="footer__info">
+    Generated on August 27, 2026 at 10:00 AM IST<br>
+    9 stories curated from 9 sources across India and global media
+  </div>
+  <p class="footer__disclaimer">Summaries are AI-generated from the cited sources and independently rewritten &mdash; not copied from the originals. Please refer to the original articles for full details and verification.</p>
+</footer>
+
+<script>
+  const progressBar = document.getElementById('progressBar');
+  function updateProgress() {
+    const scrolled = window.scrollY;
+    const max = document.body.scrollHeight - window.innerHeight;
+    const pct = max > 0 ? (scrolled / max) * 100 : 0;
+    progressBar.style.width = Math.min(pct, 100) + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+
+  const backToTop = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    backToTop.classList.toggle('show', window.scrollY > 400);
+  }, { passive: true });
+
+  let activeFilter = 'all';
+  function setFilter(filter) {
+    activeFilter = filter;
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.filter === filter);
+    });
+    applyFilters();
+  }
+
+  const searchInput = document.getElementById('searchInput');
+  searchInput.addEventListener('input', applyFilters);
+
+  function applyFilters() {
+    const query = searchInput.value.toLowerCase().trim();
+    let visibleCount = 0;
+
+    document.querySelectorAll('.story-item').forEach(story => {
+      const tags = story.dataset.tags || '';
+      const text = story.textContent.toLowerCase();
+      const matchesFilter = activeFilter === 'all' || tags.includes(activeFilter);
+      const matchesSearch = !query || text.includes(query);
+      const visible = matchesFilter && matchesSearch;
+      story.style.display = visible ? '' : 'none';
+      if (visible) visibleCount++;
+      highlightSearch(story, query);
+    });
+
+    document.querySelectorAll('.section-head').forEach(head => {
+      const section = head.dataset.section;
+      const hasVisible = activeFilter === 'all' || section === activeFilter;
+      const anyStoriesVisible = Array.from(document.querySelectorAll('.story-item[data-tags*="' + section + '"]'))
+        .some(s => s.style.display !== 'none');
+      head.style.display = (hasVisible && anyStoriesVisible) ? '' : 'none';
+    });
+
+    const pullquote = document.querySelector('.pullquote');
+    if (pullquote) {
+      pullquote.style.display = (activeFilter === 'all' || activeFilter === 'global') && !query ? '' : 'none';
+    }
+
+    document.getElementById('noResults').classList.toggle('show', visibleCount === 0);
+  }
+
+  function highlightSearch(story, query) {
+    story.querySelectorAll('mark').forEach(m => {
+      const parent = m.parentNode;
+      parent.replaceChild(document.createTextNode(m.textContent), m);
+      parent.normalize();
+    });
+    if (!query) return;
+    const walker = document.createTreeWalker(story, NodeFilter.SHOW_TEXT, {
+      acceptNode: (node) => {
+        if (node.parentNode.tagName === 'SCRIPT' || node.parentNode.tagName === 'STYLE') return NodeFilter.FILTER_REJECT;
+        return node.textContent.toLowerCase().includes(query) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+      }
+    });
+    const nodes = [];
+    let node;
+    while (node = walker.nextNode()) nodes.push(node);
+    nodes.forEach(textNode => {
+      const text = textNode.textContent;
+      const lower = text.toLowerCase();
+      const idx = lower.indexOf(query);
+      if (idx === -1) return;
+      const before = document.createTextNode(text.slice(0, idx));
+      const mark = document.createElement('mark');
+      mark.textContent = text.slice(idx, idx + query.length);
+      const after = document.createTextNode(text.slice(idx + query.length));
+      const parent = textNode.parentNode;
+      parent.replaceChild(before, textNode);
+      parent.insertBefore(mark, before.nextSibling);
+      parent.insertBefore(after, mark.nextSibling);
+    });
+  }
+
+  function toggleExpand(btn) {
+    const story = btn.closest('article');
+    story.classList.toggle('expanded');
+    const label = story.classList.contains('expanded') ? 'Less' : 'More';
+    btn.childNodes[0].textContent = label + ' ';
+  }
+
+  let bookmarks = new Set();
+  function toggleBookmark(btn) {
+    const story = btn.closest('article');
+    const headline = story.querySelector('.story__headline').textContent.trim();
+    btn.classList.toggle('bookmarked');
+    if (btn.classList.contains('bookmarked')) {
+      bookmarks.add(headline);
+      showToast('\u2605 Story saved');
+    } else {
+      bookmarks.delete(headline);
+      showToast('Story removed');
+    }
+    updateBookmarkCount();
+  }
+
+  function updateBookmarkCount() {
+    const count = bookmarks.size;
+    const el = document.getElementById('bmCount');
+    el.textContent = count > 0 ? count : '';
+  }
+
+  let bookmarksViewActive = false;
+  function toggleBookmarksView() {
+    bookmarksViewActive = !bookmarksViewActive;
+    if (bookmarksViewActive) {
+      document.querySelectorAll('.story-item').forEach(story => {
+        const btn = story.querySelector('.bookmark');
+        const isBookmarked = btn && btn.classList.contains('bookmarked');
+        story.style.display = isBookmarked ? '' : 'none';
+      });
+      document.querySelectorAll('.section-head').forEach(h => h.style.display = 'none');
+      showToast('Showing ' + bookmarks.size + ' saved stories');
+    } else {
+      setFilter('all');
+      searchInput.value = '';
+      showToast('Showing all stories');
+    }
+  }
+
+  let toastTimer;
+  function showToast(msg) {
+    const toast = document.getElementById('toast');
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('show'), 2000);
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === '/' && document.activeElement !== searchInput) {
+      e.preventDefault();
+      searchInput.focus();
+    }
+    if (e.key === 'Escape' && document.activeElement === searchInput) {
+      searchInput.value = '';
+      applyFilters();
+      searchInput.blur();
+    }
+  });
+
+  updateProgress();
+</script>
+
+</body>
+</html>
